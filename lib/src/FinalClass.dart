@@ -5,12 +5,12 @@ class FinalClass<T>
 {
   FinalClass() {
     FinalClass.check<T>(this);
-    /*if( runtimeType != typeOf<T>() )  
+    /*if( runtimeType != typeof<T>() )  
       throw new FinalClassException<T>();*/
   }
 
   static void check<T>(dynamic instance) {
-    if( instance.runtimeType != typeOf<T>() )
+    if( instance.runtimeType != typeof<T>() )
       throw new FinalClassException<T>();
   }
 }

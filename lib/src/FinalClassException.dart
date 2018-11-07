@@ -6,7 +6,7 @@ implements Exception
   final String _message;
 
   FinalClassException() 
-  	: _message = 'Class ${typeOf<T>()} is final and cannot be extended';
+  	: _message = 'Class ${typeof<T>()} is final and cannot be extended';
 
   @override String toString() => _message;
 }

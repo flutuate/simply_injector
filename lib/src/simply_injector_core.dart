@@ -1,6 +1,6 @@
 typedef C New<C>();
 
-Type typeOf<T>() => T;
+Type typeof<T>() => T;
 
 /*class Pai {
   @override String toString() => "Pai";

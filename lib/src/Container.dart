@@ -19,7 +19,7 @@ extends FinalClass<Container>
 
   @deprecated
   T getInstance<T>() {
-    Type type = typeOf<T>();
+    Type type = typeof<T>();
     Instance element = _elements[type];
     if( element == null )
       throw new ActivationException(type);
@@ -29,12 +29,12 @@ extends FinalClass<Container>
   Map<Type, Instance> _elements = {};
 
   void unregister<T>() {
-    _elements.remove(typeOf<T>());
+    _elements.remove(typeof<T>());
   }
 
   void register<T, C extends T>( New<C> creator, {Lifestyle lifestyle=Lifestyle.Transient} )
   {
-    Type type = typeOf<T>();
+    Type type = typeof<T>();
     Instance element = _elements[type];
     if( element != null )
       throw new TypeAlreadyRegisteredException(type);

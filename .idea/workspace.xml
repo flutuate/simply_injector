@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b7a41e0-5867-4850-ab90-906ad7b13f38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ContainerFactory.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ContainerTests.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/Container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/Container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/FinalClass.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/FinalClass.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/FinalClassException.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/FinalClassException.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/Lifestyle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/Lifestyle.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/simply_injector_core.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/simply_injector_core.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/simply_injector_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/simply_injector_test.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,13 +61,15 @@
     <session id="317006841">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dart" value="245" />
+          <entry key="dart" value="1021" />
           <entry key="lock" value="5" />
           <entry key="md" value="24" />
           <entry key="packages" value="2" />
@@ -71,7 +79,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dart" value="245" />
+          <entry key="Dart" value="1021" />
           <entry key="PLAIN_TEXT" value="101" />
           <entry key="YAML" value="22" />
         </counts>
@@ -79,7 +87,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="LICENSE" value="1" />
-          <entry key="dart" value="16" />
+          <entry key="dart" value="27" />
           <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
           <entry key="lock" value="1" />
@@ -91,7 +99,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Dart" value="16" />
+          <entry key="Dart" value="27" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="YAML" value="3" />
@@ -101,12 +109,49 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/simply_injector_test.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TODO.txt">
+        <entry file="file://$PROJECT_DIR$/test/ContainerTests.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="e#323#839#0" />
+                <element signature="e#379#525#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/src/Container.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="e#0#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/src/simply_injector_core.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -125,9 +170,14 @@
       <find>IElement</find>
       <find>simpl</find>
       <find>simple</find>
+      <find>type</find>
+      <find>typeOf</find>
+      <find>equals</find>
+      <find>same</find>
     </findStrings>
     <replaceStrings>
       <replace>Instance</replace>
+      <replace>typeof</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -147,16 +197,20 @@
         <option value="$PROJECT_DIR$/example/CancelOrderHandler.dart" />
         <option value="$PROJECT_DIR$/.packages" />
         <option value="$PROJECT_DIR$/pubspec.lock" />
-        <option value="$PROJECT_DIR$/lib/src/simply_injector_core.dart" />
         <option value="$PROJECT_DIR$/lib/src/ClassAlreadyRegisteredException.dart" />
         <option value="$PROJECT_DIR$/lib/src/ActivationException.dart" />
         <option value="$PROJECT_DIR$/lib/src/TypeAlreadyRegisteredException.dart" />
         <option value="$PROJECT_DIR$/example/EventPublisher.dart" />
         <option value="$PROJECT_DIR$/example/main.dart" />
-        <option value="$PROJECT_DIR$/lib/src/Container.dart" />
         <option value="$PROJECT_DIR$/CHANGELOG.md" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/TODO.txt" />
+        <option value="$PROJECT_DIR$/test/ContainerFactory.dart" />
+        <option value="$PROJECT_DIR$/lib/src/simply_injector_core.dart" />
+        <option value="$PROJECT_DIR$/lib/src/Lifestyle.dart" />
+        <option value="$PROJECT_DIR$/test/simply_injector_test.dart" />
+        <option value="$PROJECT_DIR$/lib/src/Container.dart" />
+        <option value="$PROJECT_DIR$/test/ContainerTests.dart" />
       </list>
     </option>
   </component>
@@ -171,7 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,18 +232,40 @@
               <item name="simply_injector" type="b2602c69:ProjectViewProjectNode" />
               <item name="simply_injector" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="simply_injector" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simply_injector" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simply_injector" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simply_injector" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simply_injector" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simply_injector" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541608861235" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541614043525" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Dart" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\f0031997\IdeaProjects\simply_injector\test" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -204,14 +279,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Dart Test.ToString_Always_ReturnsExpectedValue in ContainerTests.dart">
     <configuration name="main.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/example/main.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="Equals_OnDifferentInstance_ReturnsFalse in ContainerTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/ContainerTests.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="Equals_OnDifferentInstance_ReturnsFalse" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ToString_Always_ReturnsExpectedValue in ContainerTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/ContainerTests.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="ToString_Always_ReturnsExpectedValue" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests in ContainerTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/ContainerTests.dart" />
+      <option name="testName" value="ContainerTests.dart" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Dart Command Line App.main.dart" />
+      <item itemvalue="Dart Test.tests in ContainerTests.dart" />
+      <item itemvalue="Dart Test.Equals_OnDifferentInstance_ReturnsFalse in ContainerTests.dart" />
+      <item itemvalue="Dart Test.ToString_Always_ReturnsExpectedValue in ContainerTests.dart" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Dart Test.ToString_Always_ReturnsExpectedValue in ContainerTests.dart" />
+        <item itemvalue="Dart Test.Equals_OnDifferentInstance_ReturnsFalse in ContainerTests.dart" />
+        <item itemvalue="Dart Test.tests in ContainerTests.dart" />
         <item itemvalue="Dart Command Line App.main.dart" />
       </list>
     </recent_temporary>
@@ -229,6 +330,23 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="tests_in_ContainerTests_dart - 2018.11.07 at 15h 48m 16s.xml">
+      <configuration name="tests in ContainerTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Equals_OnDifferentInstance_ReturnsFalse_in_ContainerTests_dart - 2018.11.07 at 15h 50m 14s.xml">
+      <configuration name="Equals_OnDifferentInstance_ReturnsFalse in ContainerTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ToString_Always_ReturnsExpectedValue_in_ContainerTests_dart - 2018.11.07 at 15h 54m 46s.xml">
+      <configuration name="ToString_Always_ReturnsExpectedValue in ContainerTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ToString_Always_ReturnsExpectedValue_in_ContainerTests_dart - 2018.11.07 at 15h 55m 29s.xml">
+      <configuration name="ToString_Always_ReturnsExpectedValue in ContainerTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ToString_Always_ReturnsExpectedValue_in_ContainerTests_dart - 2018.11.07 at 15h 57m 09s.xml">
+      <configuration name="ToString_Always_ReturnsExpectedValue in ContainerTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -242,7 +360,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18283582" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18496802" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -251,7 +369,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32939914" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32939914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -288,9 +406,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/src/simply_injector_base.dart" />
-    <entry file="file://$PROJECT_DIR$/test/simply_injector_test.dart">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/example/simply_injector_example.dart" />
     <entry file="file://$PROJECT_DIR$/.packages">
       <provider selected="true" editor-type-id="text-editor">
@@ -323,9 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -339,17 +451,6 @@
     <entry file="file://$PROJECT_DIR$/simply_injector.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/simply_injector.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#436#0" expanded="true" />
-            <element signature="e#98#137#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -357,13 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/simply_injector_core.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -395,19 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/Container.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -422,9 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -432,9 +510,77 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/TODO.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/simply_injector.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ContainerFactory.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/Lifestyle.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/simply_injector_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/matcher-0.12.3+1/lib/src/core_matchers.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+          <folding>
+            <element signature="e#0#9387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/simply_injector_core.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/Container.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ContainerTests.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#323#839#0" />
+            <element signature="e#379#525#0" />
+          </folding>
         </state>
       </provider>
     </entry>
