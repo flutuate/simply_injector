@@ -2,6 +2,7 @@ import 'package:simply_injector/simply_injector.dart';
 
 import 'CancelOrder.dart';
 import 'CancelOrderHandler.dart';
+import 'EventPublisher.dart';
 import 'FileLogger.dart';
 import 'Guid.dart';
 import 'IEventPublisher.dart';
@@ -18,6 +19,7 @@ main()
 	container.register<IOrderRepository, SqlOrderRepository>( ()
 		=> new SqlOrderRepository(container.get<ILogger>())
 	);
+	container.register<IEventPublisher, EventPublisher>( () => new EventPublisher(), lifestyle: Lifestyle.Singleton );
 	container.register<ILogger, FileLogger>( () => new FileLogger(), lifestyle: Lifestyle.Singleton );
 	container.register<CancelOrderHandler, CancelOrderHandler>(()
 		=> new CancelOrderHandler(

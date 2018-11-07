@@ -1,9 +1,11 @@
+import 'package:simply_injector/src/ActivationException.dart';
+
 import 'simply_injector_core.dart';
 import 'Instance.dart';
 import 'Lifestyle.dart';
 import 'SingletonInstance.dart';
 import 'TransientInstance.dart';
-import 'ClassAlreadyRegistered.dart';
+import 'TypeAlreadyRegisteredException.dart';
 import 'FinalClass.dart';
 
 class Container
@@ -15,11 +17,12 @@ extends FinalClass<Container>
 
   void verify() {}
 
+  @deprecated
   T getInstance<T>() {
     Type type = typeOf<T>();
     Instance element = _elements[type];
     if( element == null )
-      throw new Exception('TODO element == null');
+      throw new ActivationException(type);
     return element.instance;
   }
 
@@ -34,7 +37,7 @@ extends FinalClass<Container>
     Type type = typeOf<T>();
     Instance element = _elements[type];
     if( element != null )
-      throw new ClassAlreadyRegistered(type);
+      throw new TypeAlreadyRegisteredException(type);
     switch( lifestyle ) {
       case Lifestyle.Singleton:
         _createSingletonInstance(type, creator());
