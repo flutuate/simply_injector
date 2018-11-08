@@ -32,8 +32,10 @@ extends FinalClass<Container>
     _elements.remove(typeof<T>());
   }
 
-  void register<T, C extends T>( New<C> creator, {Lifestyle lifestyle=Lifestyle.Transient} )
+  void register<T extends Object, C extends T>( New<C> creator, {Lifestyle lifestyle=Lifestyle.Transient} )
   {
+    if( isPrimitive<T>() )
+      throw
     Type type = typeof<T>();
     Instance element = _elements[type];
     if( element != null )
@@ -60,4 +62,8 @@ extends FinalClass<Container>
   }
 
   T get<T>() => getInstance<T>();
+}
+
+bool isPrimitive<T>() {
+  return T is bool || T is int || T is num || T is double || T is String;
 }

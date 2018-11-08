@@ -2,6 +2,21 @@ import 'package:test/test.dart';
 import 'package:simply_injector/simply_injector.dart';
 import 'ContainerFactory.dart';
 
+void main()
+{
+  group('AddRegistrationTests', ()
+  {
+    setUp(() {
+    });
+
+    test('Equals_OnSameInstance_ReturnsTrue', Equals_OnSameInstance_ReturnsTrue );
+
+    test('Equals_OnDifferentInstance_ReturnsFalse', Equals_OnDifferentInstance_ReturnsFalse );
+
+    test('ToString_Always_ReturnsExpectedValue', ToString_Always_ReturnsExpectedValue );
+  });
+}
+
 abstract class IService
 {}
 
@@ -39,17 +54,3 @@ void ToString_Always_ReturnsExpectedValue() {
   expect(result, "Instance of 'Container'");
 }
 
-void main()
-{
-  group('AddRegistrationTests', ()
-  {
-    setUp(() {
-    });
-
-    test('Equals_OnSameInstance_ReturnsTrue', Equals_OnSameInstance_ReturnsTrue );
-
-    test('Equals_OnDifferentInstance_ReturnsFalse', Equals_OnDifferentInstance_ReturnsFalse );
-
-    test('ToString_Always_ReturnsExpectedValue', ToString_Always_ReturnsExpectedValue );
-  });
-}
