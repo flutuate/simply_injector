@@ -1,4 +1,5 @@
 import 'package:simply_injector/src/ActivationException.dart';
+import 'package:simply_injector/src/Requires.dart';
 
 import 'simply_injector_core.dart';
 import 'Instance.dart';
@@ -32,11 +33,16 @@ extends FinalClass<Container>
     _elements.remove(typeof<T>());
   }
 
-  void register<T extends Object, C extends T>( New<C> creator, {Lifestyle lifestyle=Lifestyle.Transient} )
+  // TODO change method's name
+  void registerService<TService>( New<TService> creator, {Lifestyle lifestyle=Lifestyle.Transient} )
+    => register<TService, TService>(creator, lifestyle: lifestyle);
+
+  void register<TService, TImplementation extends TService>( New<TImplementation> creator, {Lifestyle lifestyle=Lifestyle.Transient} )
   {
-    if( isPrimitive<T>() )
-      throw
-    Type type = typeof<T>();
+    Requires.IsNotNull(creator, 'creator');
+    Requires.isNotAnAmbiguousType(TService, 'TService');
+
+    Type type = typeof<TService>();
     Instance element = _elements[type];
     if( element != null )
       throw new TypeAlreadyRegisteredException(type);
@@ -51,6 +57,8 @@ extends FinalClass<Container>
     }
   }
 
+  void registerInstance<TService>( New<TService> creator ) => register<TService, TService>(creator, lifestyle: Lifestyle.Singleton);
+
   void _createSingletonInstance<C>( Type type, C instance ) {
     Instance element = new SingletonInstance(instance);
     _elements[type] = element;
@@ -62,8 +70,6 @@ extends FinalClass<Container>
   }
 
   T get<T>() => getInstance<T>();
+
 }
 
-bool isPrimitive<T>() {
-  return T is bool || T is int || T is num || T is double || T is String;
-}

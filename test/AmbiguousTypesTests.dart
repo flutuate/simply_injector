@@ -1,4 +1,7 @@
+// https://github.com/simpleinjector/SimpleInjector/blob/master/src/SimpleInjector/StringResources.cs
+// https://github.com/simpleinjector/SimpleInjector/blob/master/src/SimpleInjector.Tests.Unit/AmbiguousTypesTests.cs
 import 'package:simply_injector/simply_injector.dart';
+import 'package:simply_injector/src/ArgumentException.dart';
 import 'package:test/test.dart';
 import 'ContainerFactory.dart';
 
@@ -6,67 +9,37 @@ void main()
 {
   group('AmbiguousTypesTests', ()
   {
-    setUp(() {
-    });
+    setUp(() {});
 
     test('registerFunc_SuppliedWithAmbiguousTypeString_ThrowsExpectedException', registerFunc_SuppliedWithAmbiguousTypeString_ThrowsExpectedException );
-
     test('registerFunc_SuppliedWithAmbiguousTypeType_ThrowsExpectedException', registerFunc_SuppliedWithAmbiguousTypeType_ThrowsExpectedException );
-
+    test('registerSingleFunc_SuppliedWithAmbiguousType_ThrowsExpectedException', registerSingleFunc_SuppliedWithAmbiguousType_ThrowsExpectedException );
+    test('registerSingleValue_SuppliedWithAmbiguousType_ThrowsExpectedException', registerSingleValue_SuppliedWithAmbiguousType_ThrowsExpectedException );
+    test('registerFunc_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName', registerFunc_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName );
   });
 }
 
-abstract class IService {}
-
-class Service1 implements IService {}
-
-class Service2 implements IService {}
-
-void registerFunc_SuppliedWithAmbiguousTypeString_ThrowsExpectedException()
-{
-  // Arrange
+void registerFunc_SuppliedWithAmbiguousTypeString_ThrowsExpectedException() {
   var container = ContainerFactory.New();
-
-  // Act
-  container.register<String, String>(() => "some value" );
-  container.register<int, int>(() => 123 );
-
-  print( container.get<String>() );
-  print( container.get<int>() );
+  expect(() => container.register<String, String>(() => "some value"), throwsA(TypeMatcher<ArgumentException>()));
 }
 
- void registerFunc_SuppliedWithAmbiguousTypeType_ThrowsExpectedException()
-{
-  // Arrange
+void registerFunc_SuppliedWithAmbiguousTypeType_ThrowsExpectedException() {
   var container = ContainerFactory.New();
-
-  container.register<IService, IService>(() => new Service1());
-
-  container.register<IService, IService>(() => new Service2());
-
-  // Act
-  container.register<Type, Type>(() => typeof<int>());
-
-  print( container.get<Type>() );
+  expect(() => container.register<Type, Type>(() => typeof<int>()), throwsA(TypeMatcher<ArgumentException>()));
 }
 
-/*
-void assert_RegistrationFailsWithExpectedAmbiguousMessage(String typeName, Action action)
-{
-  try
-  {
-    // Act
-    action();
+void registerSingleFunc_SuppliedWithAmbiguousType_ThrowsExpectedException() {
+  var container = ContainerFactory.New();
+  expect(() => container.register<String, String>(() => "some value", lifestyle: Lifestyle.Singleton), throwsA(TypeMatcher<ArgumentException>()));
+}
 
-    // Assert
-    Assert.Fail("Exception expected.");
-  }
-  catch (ArgumentException ex)
-  {
-  string message = @"
-  You are trying to register " + typeName + @" as a service type, but registering this type
-  is not allowed to be registered because the type is ambiguous";
+void registerSingleValue_SuppliedWithAmbiguousType_ThrowsExpectedException(){
+  var container = ContainerFactory.New();
+  expect(() => container.registerInstance<String>(() => "some value"), throwsA(TypeMatcher<ArgumentException>()));
+}
 
-  AssertThat.ExceptionMessageContains(message.TrimInside(), ex);
-  }
-}*/
+void registerFunc_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName() {
+  var container = ContainerFactory.New();
+  expect(() => container.registerService<String>(() => "some value"), throwsA(TypeMatcher<ArgumentException>()));
+}

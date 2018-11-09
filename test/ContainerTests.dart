@@ -9,7 +9,7 @@ void main()
     setUp(() {
     });
 
-    test('Equals_OnSameInstance_ReturnsTrue', Equals_OnSameInstance_ReturnsTrue );
+     test('Equals_OnSameInstance_ReturnsTrue', Equals_OnSameInstance_ReturnsTrue );
 
     test('Equals_OnDifferentInstance_ReturnsFalse', Equals_OnDifferentInstance_ReturnsFalse );
 
