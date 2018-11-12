@@ -34,7 +34,7 @@ extends FinalClass<Container>
   }
 
   // TODO change method's name
-  void registerService<TService>( New<TService> creator, {Lifestyle lifestyle=Lifestyle.Transient} )
+  void registerSimple<TService>( New<TService> creator, {Lifestyle lifestyle=Lifestyle.Transient} )
     => register<TService, TService>(creator, lifestyle: lifestyle);
 
   void register<TService, TImplementation extends TService>( New<TImplementation> creator, {Lifestyle lifestyle=Lifestyle.Transient} )
@@ -57,7 +57,11 @@ extends FinalClass<Container>
     }
   }
 
-  void registerInstance<TService>( New<TService> creator ) => register<TService, TService>(creator, lifestyle: Lifestyle.Singleton);
+  void registerInstance<TService>( TService instance ) {
+    Requires.IsNotNull(instance, 'instance');
+    Requires.isNotAnAmbiguousType(TService, 'TService');
+    _createSingletonInstance(TService, instance);
+  }
 
   void _createSingletonInstance<C>( Type type, C instance ) {
     Instance element = new SingletonInstance(instance);
@@ -70,6 +74,5 @@ extends FinalClass<Container>
   }
 
   T get<T>() => getInstance<T>();
-
 }
 

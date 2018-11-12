@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b7a41e0-5867-4850-ab90-906ad7b13f38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/ArgumentException.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/Requires.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/Scope.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/StringResources.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/Types.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/Container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/Container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/Requires.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/Requires.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/AmbiguousTypesTests.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/AmbiguousTypesTests.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ContainerTests.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/ContainerTests.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,19 +56,20 @@
     <session id="317006841">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dart" value="3059" />
+          <entry key="dart" value="3322" />
           <entry key="lock" value="5" />
           <entry key="md" value="24" />
           <entry key="packages" value="2" />
@@ -83,7 +79,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dart" value="3059" />
+          <entry key="Dart" value="3322" />
           <entry key="PLAIN_TEXT" value="101" />
           <entry key="YAML" value="22" />
         </counts>
@@ -115,33 +111,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/AmbiguousTypesTests.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#1297#0" expanded="true" />
-                <element signature="e#116#170#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="88">
+              <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/apps/dart/dart-sdk/lib/core/errors.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="176" column="6" lean-forward="true" selection-start-line="176" selection-start-column="6" selection-end-line="176" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/src/Container.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
+            <state relative-caret-position="430">
+              <caret line="57" column="3" lean-forward="true" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
               <folding>
                 <element signature="e#0#62#0" expanded="true" />
               </folding>
@@ -152,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/Requires.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
               </folding>
@@ -221,13 +204,13 @@
         <option value="$PROJECT_DIR$/lib/src/ArgumentException.dart" />
         <option value="$PROJECT_DIR$/test/ContainerTests.dart" />
         <option value="$PROJECT_DIR$/lib/src/Requires.dart" />
-        <option value="$PROJECT_DIR$/test/AmbiguousTypesTests.dart" />
         <option value="$PROJECT_DIR$/lib/src/Container.dart" />
+        <option value="$PROJECT_DIR$/test/AmbiguousTypesTests.dart" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="208" />
+    <option name="x" value="207" />
     <option name="y" value="20" />
     <option name="width" value="1120" />
     <option name="height" value="800" />
@@ -274,7 +257,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541796198289" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542029132856" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Dart" />
@@ -296,29 +279,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Dart Test.tests in AmbiguousTypesTests.dart">
-    <configuration name="AddRegistrationTests in ContainerTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/ContainerTests.dart" />
-      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="AddRegistrationTests" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Ctor_Always_Succeeds in ActivationExceptionTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/ActivationExceptionTests.dart" />
-      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="Ctor_Always_Succeeds" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ToString_Always_ReturnsExpectedValue in ContainerTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/ContainerTests.dart" />
-      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="ToString_Always_ReturnsExpectedValue" />
-      <method v="2" />
-    </configuration>
-    <configuration name="registerFunc_SuppliedWithAmbiguousTypeType_ThrowsExpectedException in AmbiguousTypesTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Dart Test.AmbiguousTypesTests in AmbiguousTypesTests.dart">
+    <configuration name="AmbiguousTypesTests in AmbiguousTypesTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/test/AmbiguousTypesTests.dart" />
       <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="registerFunc_SuppliedWithAmbiguousTypeType_ThrowsExpectedException" />
+      <option name="testName" value="AmbiguousTypesTests" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RegisterSingleFunc_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName in AmbiguousTypesTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/AmbiguousTypesTests.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="RegisterSingleFunc_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName in AmbiguousTypesTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/AmbiguousTypesTests.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExpectedException in AmbiguousTypesTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/AmbiguousTypesTests.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExpectedException" />
       <method v="2" />
     </configuration>
     <configuration name="tests in AmbiguousTypesTests.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
@@ -327,19 +310,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Dart Test.ToString_Always_ReturnsExpectedValue in ContainerTests.dart" />
-      <item itemvalue="Dart Test.Ctor_Always_Succeeds in ActivationExceptionTests.dart" />
       <item itemvalue="Dart Test.tests in AmbiguousTypesTests.dart" />
-      <item itemvalue="Dart Test.registerFunc_SuppliedWithAmbiguousTypeType_ThrowsExpectedException in AmbiguousTypesTests.dart" />
-      <item itemvalue="Dart Test.AddRegistrationTests in ContainerTests.dart" />
+      <item itemvalue="Dart Test.RegisterSingleFunc_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName in AmbiguousTypesTests.dart" />
+      <item itemvalue="Dart Test.RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName in AmbiguousTypesTests.dart" />
+      <item itemvalue="Dart Test.RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExpectedException in AmbiguousTypesTests.dart" />
+      <item itemvalue="Dart Test.AmbiguousTypesTests in AmbiguousTypesTests.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Dart Test.AmbiguousTypesTests in AmbiguousTypesTests.dart" />
+        <item itemvalue="Dart Test.RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExpectedException in AmbiguousTypesTests.dart" />
+        <item itemvalue="Dart Test.RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName in AmbiguousTypesTests.dart" />
+        <item itemvalue="Dart Test.RegisterSingleFunc_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName in AmbiguousTypesTests.dart" />
         <item itemvalue="Dart Test.tests in AmbiguousTypesTests.dart" />
-        <item itemvalue="Dart Test.AddRegistrationTests in ContainerTests.dart" />
-        <item itemvalue="Dart Test.registerFunc_SuppliedWithAmbiguousTypeType_ThrowsExpectedException in AmbiguousTypesTests.dart" />
-        <item itemvalue="Dart Test.Ctor_Always_Succeeds in ActivationExceptionTests.dart" />
-        <item itemvalue="Dart Test.ToString_Always_ReturnsExpectedValue in ContainerTests.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -357,15 +340,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests_in_AmbiguousTypesTests_dart - 2018.11.08 at 10h 57m 43s.xml">
-      <configuration name="tests in AmbiguousTypesTests.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests_in_AmbiguousTypesTests_dart - 2018.11.08 at 10h 58m 04s.xml">
-      <configuration name="tests in AmbiguousTypesTests.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests_in_AmbiguousTypesTests_dart - 2018.11.09 at 18h 14m 57s.xml">
-      <configuration name="tests in AmbiguousTypesTests.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="AddRegistrationTests_in_ContainerTests_dart - 2018.11.09 at 18h 15m 27s.xml">
       <configuration name="AddRegistrationTests in ContainerTests.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
@@ -387,6 +361,15 @@
     <history-entry file="tests_in_AmbiguousTypesTests_dart - 2018.11.09 at 18h 37m 27s.xml">
       <configuration name="tests in AmbiguousTypesTests.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="tests_in_AmbiguousTypesTests_dart - 2018.11.09 at 18h 43m 08s.xml">
+      <configuration name="tests in AmbiguousTypesTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="RegisterSingleFunc_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName_in_AmbiguousTypesTests_dart - 2018.11.12 at 11h 08m 31s.xml">
+      <configuration name="RegisterSingleFunc_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName in AmbiguousTypesTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName_in_AmbiguousTypesTests_dart - 2018.11.12 at 11h 21m 38s.xml">
+      <configuration name="RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName in AmbiguousTypesTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -398,10 +381,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-6" y="-6" width="1549" height="853" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15405117" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15627097" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -410,12 +393,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25643778" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25619835" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32939914" />
-      <window_info anchor="bottom" id="Dart Analysis" order="7" weight="0.305794" />
+      <window_info active="true" anchor="bottom" id="Dart Analysis" order="7" visible="true" weight="0.30578512" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32939914" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -599,9 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="68" lean-forward="true" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -640,27 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/Requires.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/AmbiguousTypesTests.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#1297#0" expanded="true" />
-            <element signature="e#116#170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/apps/dart/dart-sdk/lib/core/errors.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="634">
@@ -668,13 +627,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/Requires.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/Container.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
+        <state relative-caret-position="430">
+          <caret line="57" column="3" lean-forward="true" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/AmbiguousTypesTests.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,6 @@
 import 'package:simply_injector/src/ArgumentException.dart';
 import 'package:simply_injector/src/StringResources.dart';
 import 'package:simply_injector/src/Types.dart';
-import 'package:simply_injector/src/simply_injector_core.dart';
 
 class Requires
 {
@@ -12,9 +11,9 @@ class Requires
     }
   }
 
-  static void IsNotNull(New creator, String paramName) {
-      if( creator == null )
-        throwArgumentNullException(paramName);
+  static void IsNotNull(Object instance, String paramName) {
+    if( instance == null )
+      throwArgumentNullException(paramName);
   }
 
   static void throwArgumentNullException(String paramName) {
