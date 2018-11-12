@@ -1,4 +1,5 @@
 import 'package:simply_injector/src/ActivationException.dart';
+import 'package:simply_injector/src/ContainerOptions.dart';
 import 'package:simply_injector/src/Requires.dart';
 
 import 'simply_injector_core.dart';
@@ -12,8 +13,13 @@ import 'FinalClass.dart';
 class Container
 extends FinalClass<Container>
 {
+  ContainerOptions _options;
+
+  ContainerOptions get options => _options;
+
   Container() {
     FinalClass.check<Container>(this);
+    this._options = new ContainerOptions(this);
   }
 
   void verify() {}
