@@ -24,8 +24,10 @@ void main()
       var container = new Container();
       container.options.allowOverridingRegistrations = false;
       container.register<IUserRepository, SqlUserRepository>( () => new SqlUserRepository() );
-      Action action = () => container.register<IUserRepository, InMemoryUserRepository>( () => new InMemoryUserRepository() );
-      expect(() => action, throwsA(TypeMatcher<InvalidOperationException>()));
+      Function action = () => container.register<IUserRepository, InMemoryUserRepository>( () => new InMemoryUserRepository() );
+      //Action action = () => container.register<IUserRepository, InMemoryUserRepository>( () => new InMemoryUserRepository() );
+      //expect(() => action, throwsA(TypeMatcher<InvalidOperationException>()));
+      expect(action, throwsA(TypeMatcher<InvalidOperationException>()));
     });
   });
 }
