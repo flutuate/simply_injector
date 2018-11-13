@@ -19,4 +19,10 @@ class Requires
   static void throwArgumentNullException(String paramName) {
     throw new ArgumentError.notNull(paramName);
   }
+
+  static void IsNotNullOrEmpty(String instance, String paramName) {
+    IsNotNull(instance, paramName);
+    if (instance.length == 0)
+      throw new ArgumentException("Value can not be empty.", paramName);
+  }
 }

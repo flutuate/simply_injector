@@ -1,9 +1,34 @@
+import 'package:meta/meta.dart';
 import 'package:simply_injector/src/Container.dart';
+import 'package:simply_injector/src/Requires.dart';
 
-enum Lifestyle {
-  Singleton,
-  Transient,
-  Scoped
+part 'TransientLifestyle.dart';
+part 'SingletonLifestyle.dart';
+part 'ScopedLifestyle.dart';
+
+abstract class Lifestyle
+{
+  static final Lifestyle Transient = new _TransientLifestyle();
+  static final Lifestyle Singleton = new _SingletonLifestyle();
+  static final Lifestyle Scoped = new _ScopedLifestyle();
+
+  final String name;
+
+  IdentificationKey _identificationKey;
+
+  @protected IdentificationKey get identificationKey => _identificationKey;
+
+  @protected Lifestyle(this.name) {
+    Requires.IsNotNullOrEmpty(name, 'name');
+    this._identificationKey = new IdentificationKey(this.runtimeType, name);
+  }
+}
+
+class IdentificationKey {
+  final Type type;
+  final String name;
+
+  IdentificationKey(this.type, this.name);
 }
 
 /*abstract class LifestyleEx
