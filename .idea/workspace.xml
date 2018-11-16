@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b7a41e0-5867-4850-ab90-906ad7b13f38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/Container.Common.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/InstanceProducer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/NotImplementedException.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/RegisterByGenericArgumentTests.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/ActivationException.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ActivationException.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/Container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/Container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/ContainerOptions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ContainerOptions.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/Lifestyle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/Lifestyle.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/Requires.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/Requires.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/Scope.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/ScopedLifestyle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ScopedLifestyle.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/SingletonLifestyle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/SingletonLifestyle.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/StringResources.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/StringResources.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/TransientInstance.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/TransientInstance.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/TransientLifestyle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/TransientLifestyle.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/Types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/Types.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/simply_injector_core.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/simply_injector_core.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AmbiguousTypesTests.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/AmbiguousTypesTests.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/InMemoryUserRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/InMemoryUserRepository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/SqlUserRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/SqlUserRepository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/RegisterByGenericArgumentTests.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/RegisterByGenericArgumentTests.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,7 +72,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dart" value="8966" />
+          <entry key="dart" value="9048" />
           <entry key="lock" value="5" />
           <entry key="md" value="24" />
           <entry key="packages" value="2" />
@@ -100,7 +82,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dart" value="8966" />
+          <entry key="Dart" value="9048" />
           <entry key="PLAIN_TEXT" value="101" />
           <entry key="YAML" value="22" />
         </counts>
@@ -109,7 +91,7 @@
         <counts>
           <entry key="LICENSE" value="1" />
           <entry key="Scope" value="1" />
-          <entry key="dart" value="171" />
+          <entry key="dart" value="176" />
           <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
           <entry key="lock" value="1" />
@@ -121,7 +103,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Dart" value="171" />
+          <entry key="Dart" value="176" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="YAML" value="3" />
@@ -133,10 +115,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/RegisterByGenericArgumentTests.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/src/SingletonLifestyle.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="91" lean-forward="true" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="91" />
+            <state relative-caret-position="153">
+              <caret line="9" column="125" selection-start-line="9" selection-start-column="125" selection-end-line="9" selection-end-column="125" />
             </state>
           </provider>
         </entry>
@@ -144,26 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/TransientLifestyle.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/RegisterByGenericArgumentTests.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_api-0.2.1/lib/src/frontend/expect.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+            <state relative-caret-position="153">
+              <caret line="9" column="123" selection-start-line="9" selection-start-column="123" selection-end-line="9" selection-end-column="123" />
             </state>
           </provider>
         </entry>
@@ -171,11 +144,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/Container.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="51" column="50" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="50" />
+            <state relative-caret-position="450">
+              <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_api-0.2.1/lib/src/frontend/expect.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="159" column="29" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -267,10 +249,10 @@
         <option value="$PROJECT_DIR$/lib/src/StringResources.dart" />
         <option value="$PROJECT_DIR$/lib/src/Lifestyle.dart" />
         <option value="$PROJECT_DIR$/lib/src/Types.dart" />
-        <option value="$PROJECT_DIR$/lib/src/SingletonLifestyle.dart" />
-        <option value="$PROJECT_DIR$/lib/src/TransientLifestyle.dart" />
-        <option value="$PROJECT_DIR$/test/InMemoryUserRepository.dart" />
         <option value="$PROJECT_DIR$/test/RegisterByGenericArgumentTests.dart" />
+        <option value="$PROJECT_DIR$/test/InMemoryUserRepository.dart" />
+        <option value="$PROJECT_DIR$/lib/src/TransientLifestyle.dart" />
+        <option value="$PROJECT_DIR$/lib/src/SingletonLifestyle.dart" />
       </list>
     </option>
   </component>
@@ -316,7 +298,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542396294073" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542396986456" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -401,35 +383,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExpectedException_in_AmbiguousTypesTests_dart - 2018.11.12 at 11h 22m 00s.xml">
-      <configuration name="RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExpectedException in AmbiguousTypesTests.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AmbiguousTypesTests_in_AmbiguousTypesTests_dart - 2018.11.12 at 11h 24m 49s.xml">
-      <configuration name="AmbiguousTypesTests in AmbiguousTypesTests.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AllowOverridingRegistrations_WhenNotSet_IsFalse_in_ContainerOptionsTests_dart - 2018.11.12 at 13h 20m 05s.xml">
-      <configuration name="AllowOverridingRegistrations_WhenNotSet_IsFalse in ContainerOptionsTests.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AllowOverridingRegistrations_WhenNotSet_IsFalse_in_ContainerOptionsTests_dart - 2018.11.12 at 13h 20m 42s.xml">
-      <configuration name="AllowOverridingRegistrations_WhenNotSet_IsFalse in ContainerOptionsTests.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AllowOverridingRegistrations_SetToFalse_ContainerDoesNotAllowOverringRegistrations_in_ContainerOptionsTests_dart - 2018.11.13 at 07h 42m 17s.xml">
-      <configuration name="AllowOverridingRegistrations_SetToFalse_ContainerDoesNotAllowOverringRegistrations in ContainerOptionsTests.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AllowOverridingRegistrations_SetToFalse_ContainerDoesNotAllowOverringRegistrations_in_ContainerOptionsTests_dart - 2018.11.13 at 07h 44m 27s.xml">
-      <configuration name="AllowOverridingRegistrations_SetToFalse_ContainerDoesNotAllowOverringRegistrations in ContainerOptionsTests.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="AllowOverridingRegistrations_SetToFalse_ContainerDoesNotAllowOverringRegistrations_in_ContainerOptionsTests_dart - 2018.11.13 at 07h 47m 03s.xml">
-      <configuration name="AllowOverridingRegistrations_SetToFalse_ContainerDoesNotAllowOverringRegistrations in ContainerOptionsTests.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="GetInstance_OnRegisteredType_ReturnsInstanceOfExpectedType_in_RegisterByGenericArgumentTests_dart - 2018.11.16 at 17h 12m 25s.xml">
-      <configuration name="GetInstance_OnRegisteredType_ReturnsInstanceOfExpectedType in RegisterByGenericArgumentTests.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="GetInstance_OnRegisteredType_ReturnsInstanceOfExpectedType_in_RegisterByGenericArgumentTests_dart - 2018.11.16 at 17h 14m 22s.xml">
       <configuration name="GetInstance_OnRegisteredType_ReturnsInstanceOfExpectedType in RegisterByGenericArgumentTests.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
     <history-entry file="GetInstance_OnRegisteredType_ReturnsInstanceOfExpectedType_in_RegisterByGenericArgumentTests_dart - 2018.11.16 at 17h 15m 10s.xml">
       <configuration name="GetInstance_OnRegisteredType_ReturnsInstanceOfExpectedType in RegisterByGenericArgumentTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall_in_RegisterByGenericArgumentTests_dart - 2018.11.16 at 17h 24m 43s.xml">
+      <configuration name="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall in RegisterByGenericArgumentTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall_in_RegisterByGenericArgumentTests_dart - 2018.11.16 at 17h 29m 01s.xml">
+      <configuration name="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall in RegisterByGenericArgumentTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall_in_RegisterByGenericArgumentTests_dart - 2018.11.16 at 17h 29m 33s.xml">
+      <configuration name="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall in RegisterByGenericArgumentTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall_in_RegisterByGenericArgumentTests_dart - 2018.11.16 at 17h 30m 53s.xml">
+      <configuration name="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall in RegisterByGenericArgumentTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall_in_RegisterByGenericArgumentTests_dart - 2018.11.16 at 17h 31m 17s.xml">
+      <configuration name="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall in RegisterByGenericArgumentTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall_in_RegisterByGenericArgumentTests_dart - 2018.11.16 at 17h 32m 52s.xml">
+      <configuration name="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall in RegisterByGenericArgumentTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall_in_RegisterByGenericArgumentTests_dart - 2018.11.16 at 17h 35m 18s.xml">
+      <configuration name="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall in RegisterByGenericArgumentTests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall_in_RegisterByGenericArgumentTests_dart - 2018.11.16 at 17h 35m 29s.xml">
+      <configuration name="GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall in RegisterByGenericArgumentTests.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -454,12 +436,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19313304" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19313304" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32939914" />
-      <window_info anchor="bottom" id="Dart Analysis" order="7" weight="0.30472103" />
+      <window_info anchor="bottom" id="Dart Analysis" order="7" visible="true" weight="0.30472103" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32939914" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -488,6 +470,21 @@
           <url>file://$PROJECT_DIR$/test/ContainerOptionsTests.dart</url>
           <line>24</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/test/RegisterByGenericArgumentTests.dart</url>
+          <line>26</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/test/InMemoryUserRepository.dart</url>
+          <line>7</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/Container.dart</url>
+          <line>42</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -534,13 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
           <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/stack_trace-1.9.3/lib/src/stack_zone_specification.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="195" column="31" selection-start-line="195" selection-start-column="31" selection-end-line="195" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -810,51 +800,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/SingletonLifestyle.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="91" lean-forward="true" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/SingletonInstance.dart">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/stack_trace-1.9.3/lib/src/stack_zone_specification.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="156" column="13" lean-forward="true" selection-start-line="156" selection-start-column="13" selection-end-line="157" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_api-0.2.1/lib/src/frontend/expect.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="159" column="29" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/Container.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="51" column="50" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="50" />
+        <state relative-caret-position="450">
+          <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/TransientLifestyle.dart">
+    <entry file="file://$PROJECT_DIR$/test/RegisterByGenericArgumentTests.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="510">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/InMemoryUserRepository.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+        <state relative-caret-position="153">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_api-0.2.1/lib/src/frontend/expect.dart">
+    <entry file="file://$PROJECT_DIR$/lib/src/TransientLifestyle.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="9" column="123" selection-start-line="9" selection-start-column="123" selection-end-line="9" selection-end-column="123" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/RegisterByGenericArgumentTests.dart">
+    <entry file="file://$PROJECT_DIR$/lib/src/SingletonLifestyle.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        <state relative-caret-position="153">
+          <caret line="9" column="125" selection-start-line="9" selection-start-column="125" selection-end-line="9" selection-end-column="125" />
         </state>
       </provider>
     </entry>

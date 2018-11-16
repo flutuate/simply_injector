@@ -7,17 +7,17 @@ extends Lifestyle
 
   @override
   InstanceProducer createInstanceProducer<TService, TImplementation>(Constructor<TImplementation> constructor)
-    => new _TransientInstanceProducer<TService, TImplementation>(typeof<TService>(), typeof<TImplementation>(), constructor());
+    => new _TransientInstanceProducer<TService, TImplementation>(typeof<TService>(), typeof<TImplementation>(), constructor);
 }
 
 class _TransientInstanceProducer<TService, TImplementation>
 implements InstanceProducer<TService>
 {
-  TImplementation _singletonInstance;
+  Constructor<TImplementation> _constructor;
 
-  _TransientInstanceProducer(Type serviceType, Type implementationType, this._singletonInstance);
+  _TransientInstanceProducer(Type serviceType, Type implementationType, this._constructor);
 
   @override TService create() {
-    return _singletonInstance as TService;
+    return _constructor() as TService;
   }
 }

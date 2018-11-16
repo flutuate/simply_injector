@@ -28,7 +28,7 @@ void main()
       container.register<IUserRepository, InMemoryUserRepository>(() => new InMemoryUserRepository());
       var instance1 = container.get<IUserRepository>();
       var instance2 = container.get<IUserRepository>();
-      expect(instance1 == instance2, isFalse, reason: 'Register<TService, TImplementation>() should return transient objects.');
+      expect(identical(instance1,instance2), isFalse, reason: 'Register<TService, TImplementation>() should return transient objects.');
     } );
 
   });

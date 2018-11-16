@@ -3,5 +3,9 @@ import 'IUserRepository.dart';
 class InMemoryUserRepository
 implements IUserRepository
 {
-  InMemoryUserRepository() { print('InMemoryUserRepository'); }
+  static int counter = 0;
+  InMemoryUserRepository() {
+    counter++;
+    print('InMemoryUserRepository: $counter');
+  }
 }
