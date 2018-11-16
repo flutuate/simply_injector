@@ -1,9 +1,11 @@
+import 'package:simply_injector/src/ArgumentException.dart';
 import 'package:test/test.dart';
 import 'package:simply_injector/simply_injector.dart';
 import 'ContainerFactory.dart';
 import 'IUserRepository.dart';
 import 'InMemoryUserRepository.dart';
 import 'SqlUserRepository.dart';
+import 'TestClasses.dart';
 
 void main()
 {
@@ -31,5 +33,10 @@ void main()
       expect(identical(instance1,instance2), isFalse, reason: 'Register<TService, TImplementation>() should return transient objects.');
     } );
 
+    test('RegisterByGenericArgument_GenericArgumentOfInvalidType_ThrowsException', () {
+      Container container = ContainerFactory.New();
+      Function action = () => container.register<Object, ConcreteTypeWithValueTypeConstructorArgument>(() => new ConcreteTypeWithValueTypeConstructorArgument(0));
+      expect(action(), TypeMatcher<ArgumentException>() );
+    } );
   });
 }
