@@ -11,7 +11,7 @@ class Requires
     }
   }
 
-  static void IsNotNull(Object instance, String paramName) {
+  static void isNotNull(Object instance, String paramName) {
     if( instance == null )
       throwArgumentNullException(paramName);
   }
@@ -20,8 +20,8 @@ class Requires
     throw new ArgumentError.notNull(paramName);
   }
 
-  static void IsNotNullOrEmpty(String instance, String paramName) {
-    IsNotNull(instance, paramName);
+  static void isNotNullOrEmpty(String instance, String paramName) {
+    isNotNull(instance, paramName);
     if (instance.length == 0)
       throw new ArgumentException("Value can not be empty.", paramName);
   }

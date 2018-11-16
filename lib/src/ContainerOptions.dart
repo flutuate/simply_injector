@@ -1,15 +1,35 @@
 import 'package:simply_injector/src/Container.dart';
+import 'package:simply_injector/src/InvalidOperationException.dart';
+import 'package:simply_injector/src/Lifestyle.dart';
+import 'package:simply_injector/src/Requires.dart';
+import 'package:simply_injector/src/StringResources.dart';
 
 class ContainerOptions
 {
-  Container _container;
+  final Container container;
+  bool allowOverridingRegistrations = false;
 
-  bool _allowOverridingRegistrations = false;
+  ContainerOptions(this.container) {
+    Requires.isNotNull(container, 'container');
+  }
 
-  ContainerOptions(this._container);
+  Lifestyle _defaultLifestyle = Lifestyle.Transient;
 
-  bool get allowOverridingRegistrations => _allowOverridingRegistrations;
+  Lifestyle get defaultLifestyle => _defaultLifestyle;
 
-  set allowOverridingRegistrations (bool value) => _allowOverridingRegistrations = value;
+  set defaultLifestyle (Lifestyle value) {
+    Requires.isNotNull(value, 'value');
+    _throwWhenContainerHasRegistrations('defaultLifestyle');
+    _defaultLifestyle = value;
+  }
+
+  void _throwWhenContainerHasRegistrations(String propertyName)
+  {
+    if (container.isLocked || container.hasRegistrations)
+    {
+      throw new InvalidOperationException(
+          StringResources.propertyCanNotBeChangedAfterTheFirstRegistration(propertyName));
+    }
+  }
 
 }

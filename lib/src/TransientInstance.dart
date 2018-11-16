@@ -4,7 +4,7 @@ import 'Instance.dart';
 class TransientInstance<C>
 implements Instance<C>
 {
-  New<C> _creator;
+  Constructor<C> _creator;
 
   C get instance {
     return _creator();
