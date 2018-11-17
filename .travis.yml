@@ -1,2 +1,6 @@
 language: dart
 
+branches:
+  only:
+    basic
+
