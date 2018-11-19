@@ -5,9 +5,6 @@ class ContainerFactory
   static Container New()
   {
     var container = new Container();
-
-    //container.Options.EnableDynamicAssemblyCompilation = true;
-
     return container;
   }
 }

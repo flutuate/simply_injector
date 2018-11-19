@@ -4,3 +4,35 @@ class ConcreteTypeWithValueTypeConstructorArgument
   {
   }
 }
+
+abstract class IUserRepository
+{}
+
+class SqlUserRepository
+implements IUserRepository
+{
+  SqlUserRepository() {
+    print('SqlUserRepository');
+  }
+}
+
+class InMemoryUserRepository
+implements IUserRepository
+{
+  static int counter = 0;
+
+  InMemoryUserRepository() {
+    counter++;
+    print('InMemoryUserRepository: $counter');
+  }
+}
+
+
+class CovariantImplementation<T>
+implements ICovariant<T>
+{
+}
+
+abstract class ICovariant<T>
+{
+}
