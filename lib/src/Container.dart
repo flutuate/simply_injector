@@ -77,16 +77,5 @@ with Container_Common
 
   void unregister<TService>() => _producers.remove(typeof<TService>());
 
-/*
-  void _createSingletonInstance<C>( Type type, C instance ) {
-    Instance element = new SingletonInstance(instance);
-    _elements[type] = element;
-  }
-
-  void _createTransientInstance<C>( Type type, New<C> creator ) {
-    Instance element = new TransientInstance(creator);
-    _elements[type] = element;
-  }*/
-
 }
 

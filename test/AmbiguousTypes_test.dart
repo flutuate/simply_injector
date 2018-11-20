@@ -23,13 +23,8 @@ void main()
 
     test('RegisterSingleFunc_SuppliedWithAmbiguousType_ThrowsExpectedException', () {
       var container = ContainerFactory.New();
-      //TODO expect(() => container.register<String, String>(() => "some value", lifestyle: Lifestyle.Singleton), throwsA(TypeMatcher<ArgumentException>()));
+      expect(() => container.register<String, String>(() => "some value", Lifestyle.Singleton), throwsA(TypeMatcher<ArgumentException>()));
     } );
-
-    test('RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExpectedException', (){
-      var container = ContainerFactory.New();
-      //TODO expect(() => container.registerInstance<String>("some value"), throwsA(TypeMatcher<ArgumentException>()));
-    });
 
     test('RegisterFunc_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName', () {
       var container = ContainerFactory.New();
@@ -38,12 +33,12 @@ void main()
 
     test('RegisterSingleFunc_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName', () {
       var container = ContainerFactory.New();
-      //TODO expect(() => container.registerSimple<String>(() => "some value", lifestyle: Lifestyle.Singleton), throwsA(TypeMatcher<ArgumentException>()));
+      expect(() => container.registerSimple<String>(() => "some value", Lifestyle.Singleton), throwsA(TypeMatcher<ArgumentException>()));
     } );
 
     test('RegisterSingleValue_SuppliedWithAmbiguousType_ThrowsExceptionWithExpectedParamName', () {
       var container = ContainerFactory.New();
-      //TODO expect(() => container.registerInstance<String>("some value"), throwsA(TypeMatcher<ArgumentException>()));
+      expect(() => container.registerSimple<String>(() => "some value"), throwsA(TypeMatcher<ArgumentException>()));
     } );
   });
 }

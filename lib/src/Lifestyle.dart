@@ -10,7 +10,7 @@ part 'ScopedLifestyle.dart';
 abstract class Lifestyle
 {
   static final Lifestyle Transient = new TransientLifestyle();
-  //TODO static final Lifestyle Singleton = new _SingletonLifestyle();
+  static final Lifestyle Singleton = new SingletonLifestyle();
   //TODO static final Lifestyle Scoped = new _ScopedLifestyle();
 
   final String name;

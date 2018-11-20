@@ -1,3 +1,8 @@
+import 'package:simply_injector/src/Container.dart';
+
+class ContainerEx extends Container
+{}
+
 class ConcreteTypeWithValueTypeConstructorArgument
 {
   ConcreteTypeWithValueTypeConstructorArgument(int intParam)
