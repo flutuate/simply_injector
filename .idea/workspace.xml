@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b7a41e0-5867-4850-ab90-906ad7b13f38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/Container_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/CuriouslyRecurringTemplatePattern_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/Container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/Container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/Lifestyle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/Lifestyle.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ActivationExceptionTests.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/ActivationException_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AmbiguousTypesTests.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/AmbiguousTypes_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ContainerTests.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/RegisterByGenericArgumentTests.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/RegisterByGenericArgument_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/TestClasses.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/TestClasses.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/simply_injector_test.dart" beforeDir="false" />
-    </list>
+    <list default="true" id="7b7a41e0-5867-4850-ab90-906ad7b13f38" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -322,7 +310,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542677035860" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542677093490" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
