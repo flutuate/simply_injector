@@ -10,8 +10,20 @@ import 'simply_injector_core.dart';
 
 part 'Container.Common.dart';
 
+class SimplyInjector extends _Container
+{
+  factory SimplyInjector._() => null;
+
+  SimplyInjector.Container() {
+    FinalClass.check<SimplyInjector>(this);
+    new _Container();
+  }
+}
+
+class _Container extends Container {}
+
 class Container
-extends FinalClass<Container>
+//extends FinalClass<Container>
 with Container_Common
 {
   Map<Type, InstanceProducer> _producers = {};
