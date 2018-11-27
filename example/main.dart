@@ -12,17 +12,16 @@ import 'SqlOrderRepository.dart';
 
 main()
 {
-  // 1. Create a new Simple Injector container
-  Container container = new Container();
+	// 1. Create a new Simple Injector container
+	var container = new SimplyInjector.Container();
 
 	// 2. Configure the container (register)
-	container.register<IOrderRepository, SqlOrderRepository>( ()
-		=> new SqlOrderRepository(container.get<ILogger>())
-	);
-	//TODO container.register<IEventPublisher, EventPublisher>( () => new EventPublisher(), lifestyle: Lifestyle.Singleton );
-	//TODO container.register<ILogger, FileLogger>( () => new FileLogger(), lifestyle: Lifestyle.Singleton );
+	container.register<IOrderRepository, SqlOrderRepository>( () => new SqlOrderRepository(container.get<ILogger>()));
+	container.register<ILogger, FileLogger>( () => new FileLogger(), Lifestyle.Singleton );
+	container.register<IEventPublisher, EventPublisher>( () => new EventPublisher(), Lifestyle.Singleton );
+
 	container.register<CancelOrderHandler, CancelOrderHandler>(()
-		=> new CancelOrderHandler(
+	=> new CancelOrderHandler(
 			container.get<IOrderRepository>(),
 			container.get<ILogger>(),
 			container.get<IEventPublisher>() )
@@ -40,3 +39,4 @@ main()
 
 	handler.Handle(command);
 }
+

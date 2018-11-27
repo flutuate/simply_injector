@@ -15,9 +15,3 @@ export 'src/SingletonInstance.dart';
 export 'src/TransientInstance.dart';
 
 // TODO: Export any libraries intended for clients of this package.
-
-void main()
-{
-  Container x = SimplyInjector.Container();
-  print(x.runtimeType);
-}
