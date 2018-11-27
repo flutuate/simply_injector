@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:simply_injector/src/InstanceProducer.dart';
 import 'package:simply_injector/src/Requires.dart';
 import 'package:simply_injector/src/simply_injector_core.dart';
