@@ -1,19 +1,13 @@
 import 'package:simply_injector/src/Container.dart';
-import 'package:simply_injector/src/FinalClassException.dart';
 import 'package:simply_injector/src/simply_injector_core.dart';
 import 'package:test/test.dart';
 import 'ContainerFactory.dart';
-import 'TestClasses.dart';
 
 void main()
 {
   group('ContainerTests', ()
   {
     setUp(() {
-    });
-
-    test('ContainerIsFinalClass', () {
-      expect(() => new ContainerEx(), throwsA(TypeMatcher<FinalClassException>()));
     });
 
     test('Equals_OnSameInstance_ReturnsTrue', () {
