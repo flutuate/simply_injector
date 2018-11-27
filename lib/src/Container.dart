@@ -1,3 +1,4 @@
+import 'package:meta/meta.dart';
 import 'package:simply_injector/src/ActivationException.dart';
 import 'package:simply_injector/src/ContainerOptions.dart';
 import 'package:simply_injector/src/InstanceProducer.dart';
