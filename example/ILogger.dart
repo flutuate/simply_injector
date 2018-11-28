@@ -1,4 +1,3 @@
-abstract class ILogger 
-{
+abstract class ILogger {
   void Log(String text);
 }

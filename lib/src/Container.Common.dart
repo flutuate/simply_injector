@@ -1,13 +1,14 @@
 part of 'Container.dart';
 
-mixin Container_Common
-{
-  @protected bool get isLocked => false; //TODO
+mixin Container_Common {
+  @protected
+  bool get isLocked => false; //TODO
 
-  @protected bool get hasRegistrations => false; //TODO
+  @protected
+  bool get hasRegistrations => false; //TODO
 
-  @protected void throwWhenContainerIsLockedOrDisposed()
-  {
+  @protected
+  void throwWhenContainerIsLockedOrDisposed() {
     //TODO
   }
 }

@@ -1,6 +1,4 @@
-class ArgumentException
-implements Exception
-{
+class ArgumentException implements Exception {
   final String _message;
   final String _paramName;
 

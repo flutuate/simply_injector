@@ -1,3 +1,1 @@
-class NotImplementedException
-extends UnimplementedError
-{}
+class NotImplementedException extends UnimplementedError {}

@@ -1,4 +1,3 @@
-abstract class InstanceProducer<TService>
-{
+abstract class InstanceProducer<TService> {
   TService create();
 }

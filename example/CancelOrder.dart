@@ -1,9 +1,8 @@
 import 'Guid.dart';
 
-class CancelOrder 
-{
+class CancelOrder {
   Guid OrderId;
-  
+
   CancelOrder(this.OrderId);
 
   @override

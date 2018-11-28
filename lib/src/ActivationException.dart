@@ -1,6 +1,4 @@
-class ActivationException
-implements Exception
-{
+class ActivationException implements Exception {
   final String _message;
 
   ActivationException(Type type)
@@ -8,7 +6,8 @@ implements Exception
 
   ActivationException.string(this._message);
 
-  @override String toString() {
+  @override
+  String toString() {
     return '$runtimeType: $_message';
   }
 }

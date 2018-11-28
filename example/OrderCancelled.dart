@@ -1,9 +1,7 @@
 import 'Guid.dart';
 
-class OrderCancelled 
-{
+class OrderCancelled {
   Guid OrderId;
-  
+
   OrderCancelled(this.OrderId);
 }
-

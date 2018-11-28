@@ -4,8 +4,7 @@ import 'package:simply_injector/src/Lifestyle.dart';
 import 'package:simply_injector/src/Requires.dart';
 import 'package:simply_injector/src/StringResources.dart';
 
-class ContainerOptions
-{
+class ContainerOptions {
   final Container container;
   bool allowOverridingRegistrations = false;
 
@@ -17,19 +16,17 @@ class ContainerOptions
 
   Lifestyle get defaultLifestyle => _defaultLifestyle;
 
-  set defaultLifestyle (Lifestyle value) {
+  set defaultLifestyle(Lifestyle value) {
     Requires.isNotNull(value, 'value');
     _throwWhenContainerHasRegistrations('defaultLifestyle');
     _defaultLifestyle = value;
   }
 
-  void _throwWhenContainerHasRegistrations(String propertyName)
-  {
-    if (container.isLocked || container.hasRegistrations)
-    {
+  void _throwWhenContainerHasRegistrations(String propertyName) {
+    if (container.isLocked || container.hasRegistrations) {
       throw new InvalidOperationException(
-          StringResources.propertyCanNotBeChangedAfterTheFirstRegistration(propertyName));
+          StringResources.propertyCanNotBeChangedAfterTheFirstRegistration(
+              propertyName));
     }
   }
-
 }

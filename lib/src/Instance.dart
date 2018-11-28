@@ -1,4 +1,3 @@
-abstract class Instance<C>
-{
+abstract class Instance<C> {
   C get instance;
 }

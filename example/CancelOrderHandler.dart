@@ -5,14 +5,13 @@ import 'CancelOrder.dart';
 import 'OrderCancelled.dart';
 import 'OrderStatus.dart';
 
-class CancelOrderHandler 
-{
+class CancelOrderHandler {
   final IOrderRepository repository;
   final ILogger logger;
   final IEventPublisher publisher;
 
   // Use constructor injection for the dependencies
-  CancelOrderHandler( this.repository, this.logger, this.publisher );
+  CancelOrderHandler(this.repository, this.logger, this.publisher);
 
   void Handle(CancelOrder command) {
     this.logger.Log("Cancelling order " + command.OrderId.toString());

@@ -1,23 +1,25 @@
 part of 'Lifestyle.dart';
 
-@protected class SingletonLifestyle
-extends Lifestyle
-{
-  SingletonLifestyle(): super('Singleton');
+@protected
+class SingletonLifestyle extends Lifestyle {
+  SingletonLifestyle() : super('Singleton');
 
   @override
-  InstanceProducer createInstanceProducer<TService, TImplementation>(Constructor<TImplementation> constructor)
-    => new _SingletonInstanceProducer<TService, TImplementation>(typeof<TService>(), typeof<TImplementation>(), constructor());
+  InstanceProducer createInstanceProducer<TService, TImplementation>(
+          Constructor<TImplementation> constructor) =>
+      new _SingletonInstanceProducer<TService, TImplementation>(
+          typeof<TService>(), typeof<TImplementation>(), constructor());
 }
 
 class _SingletonInstanceProducer<TService, TImplementation>
-    implements InstanceProducer<TService>
-{
+    implements InstanceProducer<TService> {
   TImplementation _singletonInstance;
 
-  _SingletonInstanceProducer(Type serviceType, Type implementationType, this._singletonInstance);
+  _SingletonInstanceProducer(
+      Type serviceType, Type implementationType, this._singletonInstance);
 
-  @override TService create() {
+  @override
+  TService create() {
     return _singletonInstance as TService;
   }
 }

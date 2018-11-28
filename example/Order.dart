@@ -1,10 +1,9 @@
 import 'OrderStatus.dart';
 
-class Order 
-{
+class Order {
   final String Id;
 
   OrderStatus Status;
-  
-  Order(this.Id, {this.Status=OrderStatus.Cancelled});
+
+  Order(this.Id, {this.Status = OrderStatus.Cancelled});
 }

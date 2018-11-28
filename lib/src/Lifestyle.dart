@@ -7,17 +7,18 @@ part 'TransientLifestyle.dart';
 part 'SingletonLifestyle.dart';
 part 'ScopedLifestyle.dart';
 
-abstract class Lifestyle
-{
+abstract class Lifestyle {
   static final Lifestyle Transient = new TransientLifestyle();
   static final Lifestyle Singleton = new SingletonLifestyle();
   //TODO static final Lifestyle Scoped = new _ScopedLifestyle();
 
   final String name;
 
-  @protected Lifestyle(this.name) {
+  @protected
+  Lifestyle(this.name) {
     Requires.isNotNullOrEmpty(name, 'name');
   }
 
-  InstanceProducer createInstanceProducer<TService, TImplementation>(Constructor<TImplementation> constructor);
+  InstanceProducer createInstanceProducer<TService, TImplementation>(
+      Constructor<TImplementation> constructor);
 }

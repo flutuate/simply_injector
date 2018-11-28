@@ -1,6 +1,4 @@
-class InvalidOperationException
-implements Exception
-{
+class InvalidOperationException implements Exception {
   final String _message;
 
   InvalidOperationException(this._message);

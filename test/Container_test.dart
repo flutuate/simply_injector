@@ -3,12 +3,9 @@ import 'package:simply_injector/src/simply_injector_core.dart';
 import 'package:test/test.dart';
 import 'ContainerFactory.dart';
 
-void main()
-{
-  group('ContainerTests', ()
-  {
-    setUp(() {
-    });
+void main() {
+  group('ContainerTests', () {
+    setUp(() {});
 
     test('Equals_OnSameInstance_ReturnsTrue', () {
       var container = ContainerFactory.New();
@@ -16,7 +13,7 @@ void main()
       var result = container == container;
 
       expect(result, isTrue);
-    } );
+    });
 
     test('Equals_OnDifferentInstance_ReturnsFalse', () {
       var container1 = ContainerFactory.New();
@@ -35,15 +32,12 @@ void main()
       expect(result, "Instance of 'Container'");
     });
 
-
     test('GetType_Always_ReturnsTheExpectedType', () {
       var container = ContainerFactory.New();
 
       Type type = container.runtimeType;
 
       expect(type == typeof<Container>(), isTrue);
-    } );
-
+    });
   });
 }
-

@@ -10,8 +10,7 @@ import 'simply_injector_core.dart';
 
 part 'Container.Common.dart';
 
-class SimplyInjector extends _Container
-{
+class SimplyInjector extends _Container {
   factory SimplyInjector._() => null;
 
   SimplyInjector.Container() {
@@ -24,8 +23,8 @@ class _Container extends Container {}
 
 class Container
 //extends FinalClass<Container>
-with Container_Common
-{
+    with
+        Container_Common {
   Map<Type, InstanceProducer> _producers = {};
 
   ContainerOptions _options;
@@ -41,18 +40,20 @@ with Container_Common
   void verify() {}
 
   // TODO change method's name
-  void registerSimple<TService>(Constructor<TService> constructor, [Lifestyle lifestyle=null] )
-    => register<TService, TService>(constructor, lifestyle);
+  void registerSimple<TService>(Constructor<TService> constructor,
+          [Lifestyle lifestyle = null]) =>
+      register<TService, TService>(constructor, lifestyle);
 
-  void register<TService, TImplementation extends TService>( Constructor<TImplementation> constructor, [Lifestyle lifestyle=null] )
-  {
+  void register<TService, TImplementation extends TService>(
+      Constructor<TImplementation> constructor,
+      [Lifestyle lifestyle = null]) {
     Requires.isNotNull(constructor, 'constructor');
     Requires.isNotAnAmbiguousType(TService, 'TService');
 
-    if( lifestyle == null )
-      lifestyle = _options.defaultLifestyle;
+    if (lifestyle == null) lifestyle = _options.defaultLifestyle;
 
-    InstanceProducer instanceProducer = lifestyle.createInstanceProducer<TService, TImplementation>(constructor);
+    InstanceProducer instanceProducer = lifestyle
+        .createInstanceProducer<TService, TImplementation>(constructor);
 
     addInstanceProducer(typeof<TService>(), instanceProducer);
 
@@ -70,7 +71,9 @@ with Container_Common
     }*/
   }
 
-  @protected void addInstanceProducer(Type serviceType, InstanceProducer instanceProducer) {
+  @protected
+  void addInstanceProducer(
+      Type serviceType, InstanceProducer instanceProducer) {
     Requires.isNotNull(serviceType, 'serviceType');
     Requires.isNotNull(instanceProducer, 'instanceProducer');
     _producers[serviceType] = instanceProducer;
@@ -82,12 +85,9 @@ with Container_Common
   TService get<TService>() {
     Type type = typeof<TService>();
     InstanceProducer<TService> producer = _producers[type];
-    if( producer == null )
-      throw new ActivationException(type);
+    if (producer == null) throw new ActivationException(type);
     return producer.create();
   }
 
   void unregister<TService>() => _producers.remove(typeof<TService>());
-
 }
-

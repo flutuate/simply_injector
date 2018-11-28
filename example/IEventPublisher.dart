@@ -1,6 +1,5 @@
 import 'OrderCancelled.dart';
 
-abstract class IEventPublisher 
-{
+abstract class IEventPublisher {
   void Publish(OrderCancelled command);
 }
