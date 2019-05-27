@@ -20,7 +20,8 @@ class Requires {
 
   static void isNotNullOrEmpty(String instance, String paramName) {
     isNotNull(instance, paramName);
-    if (instance.length == 0)
+    if (instance.isEmpty) {
       throw new ArgumentException("Value can not be empty.", paramName);
+    }
   }
 }
