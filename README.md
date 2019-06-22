@@ -48,7 +48,7 @@ The first way it's so much elegantly ;)
 
 
 ## Example
-This is the main source of [complete example project at Simply Injector GitHub](https://github.com/lamkr/simply_injector/tree/master/example) repository:
+This is the main source of [complete example project at Simply Injector GitHub](https://github.com/flutuate/simply_injector/tree/master/example) repository:
 ```dart
 import 'package:simply_injector/simply_injector.dart';
 

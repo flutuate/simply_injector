@@ -4,6 +4,7 @@ import 'package:simply_injector/src/Lifestyle.dart';
 import 'package:simply_injector/src/Requires.dart';
 import 'package:simply_injector/src/StringResources.dart';
 
+/// Configuration options for the [SimplyInjector.Container].
 class ContainerOptions {
   final Container container;
   bool allowOverridingRegistrations = false;

@@ -1,3 +1,4 @@
+/// The standard exception thrown when a operation is invalid.
 class InvalidOperationException implements Exception {
   final String _message;
 

@@ -1,11 +1,12 @@
 part of 'Container.dart';
 
+/// Common methods used by [Container]s.
 mixin Container_Common {
-  //@protected
-  bool get isLocked => false; //TODO must be protected
+  @protected
+  bool get isLocked => false; //TODO
 
-  //@protected
-  bool get hasRegistrations => false; //TODO must be protected
+  @protected
+  bool get hasRegistrations => false; //TODO
 
   @protected
   void throwWhenContainerIsLockedOrDisposed() {

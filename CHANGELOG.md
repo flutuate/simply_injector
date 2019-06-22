@@ -1,3 +1,7 @@
+## 0.1.3
+
+- Documented classes. Changed repository owner to flutuate.
+
 ## 0.1.2
 
 - License changed. Format sources.

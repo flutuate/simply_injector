@@ -1,3 +1,4 @@
+// String resources to use of the package.
 class StringResources {
   static String typeIsAmbiguous(Type serviceType) =>
       //TODO string.Format(CultureInfo.InvariantCulture,

@@ -2,6 +2,7 @@ import 'package:simply_injector/src/ArgumentException.dart';
 import 'package:simply_injector/src/StringResources.dart';
 import 'package:simply_injector/src/Types.dart';
 
+/// Convenience class with common methods.
 class Requires {
   static void isNotAnAmbiguousType(Type type, String paramName) {
     if (Types.isAmbiguousType(type)) {
@@ -20,8 +21,7 @@ class Requires {
 
   static void isNotNullOrEmpty(String instance, String paramName) {
     isNotNull(instance, paramName);
-    if (instance.isEmpty) {
+    if (instance.length == 0)
       throw new ArgumentException("Value can not be empty.", paramName);
-    }
   }
 }

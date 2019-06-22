@@ -10,6 +10,7 @@ import 'simply_injector_core.dart';
 
 part 'Container.Common.dart';
 
+/// Convenient [Container] to keep compatibility with the original library.
 class SimplyInjector extends _Container {
   factory SimplyInjector._() => null;
 
@@ -21,6 +22,8 @@ class SimplyInjector extends _Container {
 
 class _Container extends Container {}
 
+/// Container is used to register mappings between each abstraction (service)
+/// and its corresponding implementation (component).
 class Container
 //extends FinalClass<Container>
     with
@@ -41,12 +44,12 @@ class Container
 
   // TODO change method's name
   void registerSimple<TService>(Constructor<TService> constructor,
-          [Lifestyle lifestyle]) =>
+          [Lifestyle lifestyle = null]) =>
       register<TService, TService>(constructor, lifestyle);
 
   void register<TService, TImplementation extends TService>(
       Constructor<TImplementation> constructor,
-      [Lifestyle lifestyle]) {
+      [Lifestyle lifestyle = null]) {
     Requires.isNotNull(constructor, 'constructor');
     Requires.isNotAnAmbiguousType(TService, 'TService');
 
