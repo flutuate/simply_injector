@@ -44,12 +44,12 @@ class Container
 
   // TODO change method's name
   void registerSimple<TService>(Constructor<TService> constructor,
-          [Lifestyle lifestyle]) =>
+          [Lifestyle lifestyle = null]) =>
       register<TService, TService>(constructor, lifestyle);
 
   void register<TService, TImplementation extends TService>(
       Constructor<TImplementation> constructor,
-      [Lifestyle lifestyle]) {
+      [Lifestyle lifestyle = null]) {
     Requires.isNotNull(constructor, 'constructor');
     Requires.isNotAnAmbiguousType(TService, 'TService');
 
