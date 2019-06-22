@@ -1,7 +1,7 @@
 import 'package:simply_injector/src/Container.dart';
 import 'package:simply_injector/src/simply_injector_core.dart';
 
-// Internal helper methods on System.Type.
+/// Internal helper methods on System.Type.
 class Types {
   static final List<Type> AmbiguousTypes = [
     typeof<Type>(),

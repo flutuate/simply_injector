@@ -1,3 +1,4 @@
+/// The standard exception thrown when an argument is invalid.
 class ArgumentException implements Exception {
   final String _message;
   final String _paramName;

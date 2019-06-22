@@ -10,6 +10,7 @@ import 'simply_injector_core.dart';
 
 part 'Container.Common.dart';
 
+/// Convenient [Container] to keep compatibility with the original library.
 class SimplyInjector extends _Container {
   factory SimplyInjector._() => null;
 
@@ -21,6 +22,8 @@ class SimplyInjector extends _Container {
 
 class _Container extends Container {}
 
+/// Container is used to register mappings between each abstraction (service)
+/// and its corresponding implementation (component).
 class Container
 //extends FinalClass<Container>
     with
