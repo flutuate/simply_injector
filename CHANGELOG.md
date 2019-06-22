@@ -1,6 +1,6 @@
 ## 0.1.3
 
-- Documented classes.
+- Documented classes. Changed repository owner to flutuate.
 
 ## 0.1.2
 
