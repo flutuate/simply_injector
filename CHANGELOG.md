@@ -1,3 +1,7 @@
+## 0.1.4
+
+- Dartfmt. Cleaned code.
+
 ## 0.1.3
 
 - Documented classes. Changed repository owner to flutuate.
