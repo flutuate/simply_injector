@@ -1,5 +1,5 @@
-import 'package:simply_injector/src/Container.dart';
-import 'package:simply_injector/src/simply_injector_core.dart';
+import 'Container.dart';
+import 'core.dart';
 
 /// Internal helper methods on System.Type.
 class Types {

@@ -1,25 +1,31 @@
-import 'package:simply_injector/src/Container.dart';
-
-class ContainerEx extends Container {}
-
 class ConcreteTypeWithValueTypeConstructorArgument {
   ConcreteTypeWithValueTypeConstructorArgument(int intParam) {}
 }
 
-abstract class IUserRepository {}
+abstract class IRepository {
+}
 
-class SqlUserRepository implements IUserRepository {
+abstract class UserRepository implements IRepository {
+  final createdAt;
+
+  UserRepository() :
+    createdAt = DateTime.now();
+
+  @override
+  String toString() {
+    return 'Created at $createdAt';
+  }
+}
+
+class SqlUserRepository extends UserRepository {
   SqlUserRepository() {
     print('SqlUserRepository');
   }
 }
 
-class InMemoryUserRepository implements IUserRepository {
-  static int counter = 0;
-
-  InMemoryUserRepository() {
-    counter++;
-    print('InMemoryUserRepository: $counter');
+class InMemoryUserRepository extends UserRepository {
+  InMemoryUserRepository() : super() {
+    print('InMemoryUserRepository');
   }
 }
 

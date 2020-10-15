@@ -9,24 +9,24 @@ void main() {
 
     test('RegisterByGenericArgument_WithValidGenericArguments_Succeeds', () {
       Container container = ContainerFactory.New();
-      container.register<IUserRepository, SqlUserRepository>(
+      container.register<IRepository, SqlUserRepository>(
           () => new SqlUserRepository());
     });
 
     test('GetInstance_OnRegisteredType_ReturnsInstanceOfExpectedType', () {
       Container container = ContainerFactory.New();
-      container.register<IUserRepository, SqlUserRepository>(
+      container.register<IRepository, SqlUserRepository>(
           () => new SqlUserRepository());
-      IUserRepository instance = container.get<IUserRepository>();
+      IRepository instance = container.get<IRepository>();
       expect(instance, TypeMatcher<SqlUserRepository>());
     });
 
     test('GetInstance_OnRegisteredType_ReturnsANewInstanceOnEachCall', () {
       Container container = ContainerFactory.New();
-      container.register<IUserRepository, InMemoryUserRepository>(
+      container.register<IRepository, InMemoryUserRepository>(
           () => new InMemoryUserRepository());
-      var instance1 = container.get<IUserRepository>();
-      var instance2 = container.get<IUserRepository>();
+      var instance1 = container.get<IRepository>();
+      var instance2 = container.get<IRepository>();
       expect(identical(instance1, instance2), isFalse,
           reason:
               'Register<TService, TImplementation>() should return transient objects.');

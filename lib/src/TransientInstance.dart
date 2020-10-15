@@ -1,5 +1,5 @@
 import 'Instance.dart';
-import 'simply_injector_core.dart';
+import 'core.dart';
 
 /// Represents a transient instance of [C].
 class TransientInstance<C> implements Instance<C> {

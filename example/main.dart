@@ -27,10 +27,10 @@ main() {
           container.get<ILogger>(), container.get<IEventPublisher>()));
 
   // 3. Verify your configuration
-  container.verify();
+  //container.verify();
 
   // 4. Use the container
-  var handler = container.getInstance<CancelOrderHandler>();
+  var handler = container.get<CancelOrderHandler>();
 
   var args = ['0123456789'];
   var orderId = Guid.Parse(args[0]);

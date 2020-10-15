@@ -1,3 +1,7 @@
+# 1.0.0
+
+- Applying null safety.
+
 ## 0.1.4
 
 - Dartfmt. Cleaned code.

@@ -1,5 +1,5 @@
 import 'package:simply_injector/src/Container.dart';
-import 'package:simply_injector/src/simply_injector_core.dart';
+import 'package:simply_injector/src/core.dart';
 import 'package:test/test.dart';
 import 'ContainerFactory.dart';
 

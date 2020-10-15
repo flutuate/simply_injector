@@ -2,7 +2,7 @@ part of 'Lifestyle.dart';
 
 @protected
 class SingletonLifestyle extends Lifestyle {
-  SingletonLifestyle() : super('Singleton');
+  const SingletonLifestyle() : super('Singleton');
 
   @override
   InstanceProducer createInstanceProducer<TService, TImplementation>(
