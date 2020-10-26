@@ -18,9 +18,9 @@ main() {
   container.register<IOrderRepository, SqlOrderRepository>(
       () => new SqlOrderRepository(container.get<ILogger>()));
   container.register<ILogger, FileLogger>(
-      () => new FileLogger(), Lifestyle.Singleton);
+      () => new FileLogger(), Lifestyle.singleton);
   container.register<IEventPublisher, EventPublisher>(
-      () => new EventPublisher(), Lifestyle.Singleton);
+      () => new EventPublisher(), Lifestyle.singleton);
 
   container.register<CancelOrderHandler, CancelOrderHandler>(() =>
       new CancelOrderHandler(container.get<IOrderRepository>(),

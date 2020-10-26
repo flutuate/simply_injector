@@ -1,1 +1,3 @@
-- Testar referência circular.
+# Backlog
+
+- Implement Lifestyle.scoped.

@@ -12,19 +12,19 @@ class RepoA<T extends IEntity<T>> implements IRepo<T> {}
 class RepoB<T extends IEntity<T>> implements IRepo<T> {}
 
 void main() {
-  group('CuriouslyRecurringTemplatePatternTests', () {
+  group('[Curiously Recurring Template Pattern Tests]', () {
     setUp(() {});
 
-    test('RegisterOpenGeneric_CuriouslyRecurringTemplatePattern_Succeeds', () {
+    test('Given a open generic object When registering it using curiously recurring template pattern Then it must be succeeds', () {
       var container = new Container();
       container.register<IRepo, RepoA>(() => new RepoA<Entity>());
     });
 
-    test('GetInstance_CuriouslyRecurringTemplatePattern_Succeeds', () {
+    test('Given a open generic object When registering it using curiously recurring template pattern When get instance Then it must be succeeds', () {
       var container = new Container();
       container.register<IRepo, RepoA<Entity>>(() => new RepoA<Entity>());
       var repo = container.get<IRepo>();
-      print(repo);
+      expect( repo, isA<RepoA<Entity>>() );
     });
   });
 }
