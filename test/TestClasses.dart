@@ -1,5 +1,5 @@
 class ConcreteTypeWithValueTypeConstructorArgument {
-  ConcreteTypeWithValueTypeConstructorArgument(int intParam) {}
+  ConcreteTypeWithValueTypeConstructorArgument(int intParam);
 }
 
 abstract class IRepository {
@@ -26,7 +26,7 @@ class SqlUserRepository extends UserRepository {
     if (arg is! SqlUserRepository) {
       return false;
     }
-    SqlUserRepository other = arg;
+    var other = arg;
     return other.number == number;
   }
 
@@ -48,7 +48,7 @@ class InMemoryUserRepository extends UserRepository {
     if (arg is! InMemoryUserRepository) {
       return false;
     }
-    InMemoryUserRepository other = arg;
+    var other = arg;
     return other.number == number;
   }
 

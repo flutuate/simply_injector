@@ -9,13 +9,15 @@ class SqlOrderRepository implements IOrderRepository {
   // Use constructor injection for the dependencies
   SqlOrderRepository(this.logger);
 
-  Order GetById(Guid guid) {
-    logger.Log("Getting Order " + guid.value);
-    return new Order(guid.value);
+  @override
+  Order getById(Guid guid) {
+    logger.log('Getting Order ' + guid.value);
+    return Order(guid.value);
   }
 
-  void Save(Order order) {
-    this.logger.Log("Saving order " + order.Id);
+  @override
+  void save(Order order) {
+    logger.log('Saving order ' + order.Id);
     // Save to db.
   }
 }

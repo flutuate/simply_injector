@@ -89,7 +89,7 @@ void main() {
     test('Given a string object When registering it as singleton using the declarative method Then it must throws ArgumentError', () {
       final container = SimplyInjector.Container();
       try {
-        container.register<String, String>(() => "some value", Lifestyle.singleton);
+        container.register<String, String>(() => 'some value', Lifestyle.singleton);
       }
       catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
@@ -99,7 +99,7 @@ void main() {
     test('Given a string object When registering it using the declarative method Then it must throws ArgumentError', () {
       final container = SimplyInjector.Container();
       try {
-        container.register<String, String>(() => "some value");
+        container.register<String, String>(() => 'some value');
       }
       catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
@@ -109,7 +109,7 @@ void main() {
     test('Given a string object When registering it as singleton Then it must throws ArgumentError', () {
       final container = SimplyInjector.Container();
       try {
-        container.registerSimple<String>( () => "some value", Lifestyle.singleton);
+        container.registerSimple<String>( () => 'some value', Lifestyle.singleton);
       }
       catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
@@ -119,7 +119,7 @@ void main() {
     test('Given a string object When registering it Then it must throws ArgumentError', () {
       final container = SimplyInjector.Container();
       try {
-        container.registerSimple<String>(() => "some value");
+        container.registerSimple<String>(() => 'some value');
       }
       catch (e) {
         expect(e, TypeMatcher<ArgumentError>());

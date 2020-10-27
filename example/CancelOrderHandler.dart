@@ -14,10 +14,10 @@ class CancelOrderHandler {
   CancelOrderHandler(this.repository, this.logger, this.publisher);
 
   void Handle(CancelOrder command) {
-    this.logger.Log("Cancelling order " + command.OrderId.toString());
-    var order = this.repository.GetById(command.OrderId);
+    logger.log('Cancelling order ' + command.OrderId.toString());
+    var order = repository.getById(command.OrderId);
     order.Status = OrderStatus.Cancelled;
-    this.repository.Save(order);
-    this.publisher.Publish(new OrderCancelled(command.OrderId));
+    repository.save(order);
+    publisher.Publish(OrderCancelled(command.OrderId));
   }
 }

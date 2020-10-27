@@ -11,5 +11,5 @@ abstract class IService {}
 
 void constructorAlwaysSucceeds() {
   // Act
-  new ActivationException(IService);
+  ActivationException(IService);
 }

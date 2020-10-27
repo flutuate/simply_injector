@@ -8,7 +8,7 @@ void main() {
     test('Given a registered singleton producer with registerSimple() When get two instances Then they must be the same object', () {
       final container = SimplyInjector.Container();
 
-      container.registerSimple<IRepository>(() => new SqlUserRepository(),
+      container.registerSimple<IRepository>(() => SqlUserRepository(),
           Lifestyle.singleton);
 
       final instance1 = container.get<IRepository>();
@@ -34,7 +34,7 @@ void main() {
     test('Given a registered transient producer with registerSimple() When get two instances Then they must be instance of same type but not same instance', () {
       final container = SimplyInjector.Container();
 
-      container.registerSimple<InMemoryUserRepository>(() =>  new InMemoryUserRepository());
+      container.registerSimple<InMemoryUserRepository>(() =>  InMemoryUserRepository());
 
       final instance1 = container.get<InMemoryUserRepository>();
 

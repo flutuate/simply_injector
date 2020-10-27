@@ -16,7 +16,7 @@ class SimplyInjector extends Container
 {
   /// Convenient [Container] constructor to keep compatibility with the original library.
   SimplyInjector.Container() {
-    new Container();
+    Container();
   }
 }
 
@@ -24,9 +24,9 @@ class SimplyInjector extends Container
 /// and its corresponding implementation (component).
 class Container with Container_Common
 {
-  Map<Type, InstanceProducer> _producers = {};
+  final Map<Type, InstanceProducer> _producers = {};
 
-  final ContainerOptions options = new ContainerOptions();
+  final ContainerOptions options = ContainerOptions();
 
   /// Registers a constructor for type [TService]. This constructor must be
   /// specified in [constructor] and must generate an instance of [TService].
@@ -45,7 +45,7 @@ class Container with Container_Common
       throw TypeAlreadyRegisteredException(type);
     }
 
-    InstanceProducer instanceProducer = lifestyle
+    var instanceProducer = lifestyle
         .createInstanceProducer<TService, TImplementation>(constructor);
 
     addInstanceProducer(typeof<TService>(), instanceProducer);
@@ -59,10 +59,10 @@ class Container with Container_Common
   /// Gets an instance of the given [TService].
   /// Throws [ActivationException] when there are errors resolving the service instance.
   TService get<TService>() {
-    Type type = typeof<TService>();
+    var type = typeof<TService>();
     final producer = _producers[type];
     if (producer == null) {
-      throw new ActivationException(type);
+      throw ActivationException(type);
     }
     return producer.create();
   }

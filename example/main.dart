@@ -10,20 +10,20 @@ import 'ILogger.dart';
 import 'IOrderRepository.dart';
 import 'SqlOrderRepository.dart';
 
-main() {
+void main() {
   // 1. Create a new Simple Injector container
-  var container = new SimplyInjector.Container();
+  var container = SimplyInjector.Container();
 
   // 2. Configure the container (register)
   container.register<IOrderRepository, SqlOrderRepository>(
-      () => new SqlOrderRepository(container.get<ILogger>()));
+      () => SqlOrderRepository(container.get<ILogger>()));
   container.register<ILogger, FileLogger>(
-      () => new FileLogger(), Lifestyle.singleton);
+      () => FileLogger(), Lifestyle.singleton);
   container.register<IEventPublisher, EventPublisher>(
-      () => new EventPublisher(), Lifestyle.singleton);
+      () => EventPublisher(), Lifestyle.singleton);
 
   container.register<CancelOrderHandler, CancelOrderHandler>(() =>
-      new CancelOrderHandler(container.get<IOrderRepository>(),
+      CancelOrderHandler(container.get<IOrderRepository>(),
           container.get<ILogger>(), container.get<IEventPublisher>()));
 
   // 3. Verify your configuration
@@ -34,7 +34,7 @@ main() {
 
   var args = ['0123456789'];
   var orderId = Guid.Parse(args[0]);
-  var command = new CancelOrder(orderId);
+  var command = CancelOrder(orderId);
 
   handler.Handle(command);
 }

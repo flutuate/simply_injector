@@ -1,7 +1,8 @@
 import 'ILogger.dart';
 
 class FileLogger implements ILogger {
-  void Log(String text) {
+  @override
+  void log(String text) {
     print(text);
   }
 }

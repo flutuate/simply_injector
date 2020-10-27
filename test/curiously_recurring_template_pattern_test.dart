@@ -16,13 +16,13 @@ void main() {
     setUp(() {});
 
     test('Given a open generic object When registering it using curiously recurring template pattern Then it must be succeeds', () {
-      var container = new Container();
-      container.register<IRepo, RepoA>(() => new RepoA<Entity>());
+      var container = Container();
+      container.register<IRepo, RepoA>(() => RepoA<Entity>());
     });
 
     test('Given a open generic object When registering it using curiously recurring template pattern When get instance Then it must be succeeds', () {
-      var container = new Container();
-      container.register<IRepo, RepoA<Entity>>(() => new RepoA<Entity>());
+      var container = Container();
+      container.register<IRepo, RepoA<Entity>>(() => RepoA<Entity>());
       var repo = container.get<IRepo>();
       expect( repo, isA<RepoA<Entity>>() );
     });

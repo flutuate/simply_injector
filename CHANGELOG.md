@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.0-nullsafety.4
+* Changes to conform with static analysis
+
+## 1.0.0-nullsafety.3
+* Forced remove info issues in sources
+
+## 1.0.0-nullsafety.3
+* Removed info issues in sources
+
 ## 1.0.0-nullsafety.1
 
 * Applied null safety.

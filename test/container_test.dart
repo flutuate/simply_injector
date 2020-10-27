@@ -22,7 +22,7 @@ void main() {
     test('Given a instance of Container When get your runtime type Then it must be a SimplyInjector type', () {
       final container = SimplyInjector.Container();
 
-      Type type = container.runtimeType;
+      var type = container.runtimeType;
 
       expect(type == typeof<SimplyInjector>(), isTrue);
     });

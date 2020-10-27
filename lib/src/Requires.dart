@@ -6,7 +6,7 @@ class Requires {
   static void isNotAnAmbiguousType(Type type, String paramName) {
     if (Types.isAmbiguousType(type)) {
       final message = '${StringResources.typeIsAmbiguous(type)}\nParameter name: $paramName';
-      throw new ArgumentError(message);
+      throw ArgumentError(message);
     }
   }
 }

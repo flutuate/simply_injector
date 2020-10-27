@@ -7,13 +7,13 @@ class SingletonLifestyle extends Lifestyle {
   @override
   InstanceProducer createInstanceProducer<TService, TImplementation>(
           Constructor<TImplementation> constructor) =>
-      new _SingletonInstanceProducer<TService, TImplementation>(
+      _SingletonInstanceProducer<TService, TImplementation>(
           typeof<TService>(), typeof<TImplementation>(), constructor());
 }
 
 class _SingletonInstanceProducer<TService, TImplementation>
     implements InstanceProducer<TService> {
-  TImplementation _singletonInstance;
+  final TImplementation _singletonInstance;
 
   _SingletonInstanceProducer(
       Type serviceType, Type implementationType, this._singletonInstance);
