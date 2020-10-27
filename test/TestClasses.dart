@@ -3,29 +3,61 @@ class ConcreteTypeWithValueTypeConstructorArgument {
 }
 
 abstract class IRepository {
+  int get number;
 }
 
-abstract class UserRepository implements IRepository {
-  final createdAt;
+class UserRepository implements IRepository {
+  static int _instanceNumber = 0;
 
-  UserRepository() :
-    createdAt = DateTime.now();
+  final int _number;
+
+  UserRepository() : _number = _instanceNumber++;
 
   @override
-  String toString() {
-    return 'Created at $createdAt';
-  }
+  int get number => _number;
 }
 
 class SqlUserRepository extends UserRepository {
-  SqlUserRepository() {
-    print('SqlUserRepository');
+  @override
+  bool operator ==(Object arg) {
+    if (identical(this, arg)) {
+      return true;
+    }
+    if (arg is! SqlUserRepository) {
+      return false;
+    }
+    SqlUserRepository other = arg;
+    return other.number == number;
+  }
+
+  @override
+  int get hashCode => number.hashCode;
+
+  @override
+  String toString() {
+    return number.toString();
   }
 }
 
 class InMemoryUserRepository extends UserRepository {
-  InMemoryUserRepository() : super() {
-    print('InMemoryUserRepository');
+  @override
+  bool operator ==(Object arg) {
+    if (identical(this, arg)) {
+      return true;
+    }
+    if (arg is! InMemoryUserRepository) {
+      return false;
+    }
+    InMemoryUserRepository other = arg;
+    return other.number == number;
+  }
+
+  @override
+  int get hashCode => number.hashCode;
+
+  @override
+  String toString() {
+    return number.toString();
   }
 }
 

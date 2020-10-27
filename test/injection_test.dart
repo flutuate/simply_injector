@@ -5,57 +5,49 @@ import 'package:test/test.dart';
 void main() {
   group('[Injection tests]', ()
   {
-    test('When registering a singleton producer with registerSimple() method and get the same object', () {
+    test('Given a registered singleton producer with registerSimple() When get two instances Then they must be the same object', () {
       final container = SimplyInjector.Container();
 
-      container.registerSimple<InMemoryUserRepository>(() => InMemoryUserRepository(),
-          Lifestyle.singleton);
-
-      final instance1 = container.get<InMemoryUserRepository>();
-
-      final instance2 = container.get<InMemoryUserRepository>();
-
-      expect(instance1, isA<InMemoryUserRepository>());
-
-      expect(instance2, isA<InMemoryUserRepository>());
-
-      expect(instance1, instance2);
-    });
-
-    test('When registering a singleton producer with register() method and get the same object', () {
-      final container = SimplyInjector.Container();
-
-      container.register<IRepository, InMemoryUserRepository>(() => InMemoryUserRepository(),
+      container.registerSimple<IRepository>(() => new SqlUserRepository(),
           Lifestyle.singleton);
 
       final instance1 = container.get<IRepository>();
 
       final instance2 = container.get<IRepository>();
 
-      expect(instance1, isA<InMemoryUserRepository>());
-
-      expect(instance2, isA<InMemoryUserRepository>());
-
-      expect(instance1, instance2);
+      expect(instance1.number, instance2.number);
     });
 
-    test('When registering a transient producer with registerSimple() method and get a different instance of same type', () {
+    test('Given a registered singleton producer with register() When get two instances Then they must be the same object', () {
+      final container = SimplyInjector.Container();
+
+      container.register<IRepository, SqlUserRepository>(() => SqlUserRepository(),
+          Lifestyle.singleton);
+
+      final instance1 = container.get<IRepository>();
+
+      final instance2 = container.get<IRepository>();
+
+      expect(instance1.number, instance2.number);
+    });
+
+    test('Given a registered transient producer with registerSimple() When get two instances Then they must be instance of same type but not same instance', () {
       final container = SimplyInjector.Container();
 
       container.registerSimple<InMemoryUserRepository>(() =>  new InMemoryUserRepository());
 
       final instance1 = container.get<InMemoryUserRepository>();
 
-      expect(instance1, isA<InMemoryUserRepository>());
-
       final instance2 = container.get<InMemoryUserRepository>();
+
+      expect(instance1, isA<InMemoryUserRepository>());
 
       expect(instance2, isA<InMemoryUserRepository>());
 
-      expect(instance1 != instance2, isTrue);
+      expect(instance1 == instance2, isFalse);
     });
 
-    test('Given allowOverridingRegistrations is true When registering two singleton producers to same type, then the last assumes the production', () {
+    test('Given allowOverridingRegistrations be true When registering two singleton producers to same type, then the last assumes the production', () {
       final container = SimplyInjector.Container();
 
       container.options.allowOverridingRegistrations = true;
@@ -71,7 +63,7 @@ void main() {
       expect(instance, isA<SqlUserRepository>());
     });
 
-    test('Given allowOverridingRegistrations is true When registering two transient producers to same type, then the last assumes the production', () {
+    test('Given allowOverridingRegistrations be true When registering two transient producers to same type, then the last assumes the production', () {
       final container = SimplyInjector.Container();
 
       container.options.allowOverridingRegistrations = true;
@@ -85,7 +77,7 @@ void main() {
       expect(instance, isA<SqlUserRepository>());
     });
 
-    test('When registering two singleton producers to same type Then it throws error type already registered', () {
+    test('Given two singleton producers to same type When registering the second producer Then it throws error type already registered', () {
       final container = SimplyInjector.Container();
 
       container.registerSimple<IRepository>(() => InMemoryUserRepository(),
@@ -100,7 +92,7 @@ void main() {
       }
     });
 
-    test('When registering two transient producers to same type Then it throws error type already registered', () {
+    test('Given two transient producers to same type When registering the second Then it throws error type already registered', () {
       final container = SimplyInjector.Container();
 
       container.registerSimple<IRepository>(() => InMemoryUserRepository());
@@ -113,7 +105,7 @@ void main() {
       }
     });
 
-    test('When registering two transient producers to types that inheriting from same type, then the instances must be different', () {
+    test('Given two registered transient producers inherited from same type When get instances of them Then the instances must be different', () {
       final container = SimplyInjector.Container();
 
       container.registerSimple<IRepository>(() => InMemoryUserRepository());
@@ -129,7 +121,7 @@ void main() {
       expect(instance2, isA<SqlUserRepository>());
     });
 
-    test('When registering three transient producers to types that inheriting from same type, then the instances must be different', () {
+    test('Given three registered transient producers inherited same type When get instances of them Then the instances must be different', () {
       final container = SimplyInjector.Container();
 
       container.registerSimple<IRepository>(() => InMemoryUserRepository());
