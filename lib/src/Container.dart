@@ -14,6 +14,7 @@ part 'Container.Common.dart';
 @sealed
 class SimplyInjector extends Container
 {
+  /// Convenient [Container] constructor to keep compatibility with the original library.
   SimplyInjector.Container() {
     new Container();
   }
@@ -55,6 +56,8 @@ class Container with Container_Common
     _producers[serviceType] = instanceProducer;
   }
 
+  /// Gets an instance of the given [TService].
+  /// Throws [ActivationException] when there are errors resolving the service instance.
   TService get<TService>() {
     Type type = typeof<TService>();
     final producer = _producers[type];
@@ -64,5 +67,6 @@ class Container with Container_Common
     return producer.create();
   }
 
+  /// Unregisters the producer to [TService], if it already registered.
   void unregister<TService>() => _producers.remove(typeof<TService>());
 }

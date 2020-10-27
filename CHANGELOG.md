@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0
+## 1.0.0-nullsafety.1
 
 * Applied null safety.
 * Many source codes changed.

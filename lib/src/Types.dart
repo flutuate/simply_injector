@@ -9,5 +9,6 @@ class Types {
     typeof<Container>()
   ];
 
+  /// Returns [true] if [type] is a ambiguous type.
   static bool isAmbiguousType(Type type) => AmbiguousTypes.contains(type);
 }
