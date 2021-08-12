@@ -10,8 +10,7 @@ import 'exceptions/TypeAlreadyRegisteredException.dart';
 
 /// Convenient [Container] to keep compatibility with the original library.
 @sealed
-class SimplyInjector extends Container
-{
+class SimplyInjector extends Container {
   /// Convenient [Container] constructor to keep compatibility with the original library.
   SimplyInjector.Container() {
     Container();
@@ -20,8 +19,7 @@ class SimplyInjector extends Container
 
 /// Container is used to register mappings between each abstraction (service)
 /// and its corresponding implementation (component).
-class Container
-{
+class Container {
   final Map<Type, InstanceProducer> _producers = {};
 
   final ContainerOptions options = ContainerOptions();
@@ -30,8 +28,8 @@ class Container
   /// specified in [constructor] and must generate an instance of [TService].
   /// Default value of [lifestyle] is [Lifestyle.transient].
   void registerSimple<TService>(Constructor<TService> constructor,
-      [Lifestyle lifestyle = Lifestyle.transient])
-    => register<TService, TService>(constructor, lifestyle);
+          [Lifestyle lifestyle = Lifestyle.transient]) =>
+      register<TService, TService>(constructor, lifestyle);
 
   /// Registers a constructor for type [TService]. This constructor must be
   /// specified in [constructor] and must generate an instance
@@ -39,12 +37,11 @@ class Container
   /// Default value of [lifestyle] is [Lifestyle.transient].
   void register<TService, TImplementation extends TService>(
       Constructor<TImplementation> constructor,
-      [Lifestyle lifestyle = Lifestyle.transient])
-  {
+      [Lifestyle lifestyle = Lifestyle.transient]) {
     Requires.isNotAnAmbiguousType(TService, 'TService');
 
     final type = typeof<TService>();
-    if(!options.allowOverridingRegistrations && _producers.containsKey(type) ) {
+    if (!options.allowOverridingRegistrations && _producers.containsKey(type)) {
       throw TypeAlreadyRegisteredException(type);
     }
 
@@ -55,7 +52,8 @@ class Container
   }
 
   @protected
-  void addInstanceProducer( Type serviceType, InstanceProducer instanceProducer) {
+  void addInstanceProducer(
+      Type serviceType, InstanceProducer instanceProducer) {
     _producers[serviceType] = instanceProducer;
   }
 

@@ -4,137 +4,151 @@ import 'package:simply_injector/simply_injector.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('[Ambiguous types tests]', ()
-  {
-    test('Given a ambiguous object (String) When registering it as "Type" using the declarative method Then it must throws ArgumentError', () {
+  group('[Ambiguous types tests]', () {
+    test(
+        'Given a ambiguous object (String) When registering it as "Type" using the declarative method Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
         container.register<dynamic, dynamic>(() => 'hello, world!');
-      }
-      catch (e) {
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a ambiguous object (int) When registering it as "Type" using the declarative method Then it must throws ArgumentError', () {
+    test(
+        'Given a ambiguous object (int) When registering it as "Type" using the declarative method Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
         container.register<dynamic, dynamic>(() => 1234567);
-      }
-      catch (e) {
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a ambiguous object (dynamic) When registering it using the declarative method Then it must throws ArgumentError', () {
+    test(
+        'Given a ambiguous object (dynamic) When registering it using the declarative method Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
         container.register<dynamic, dynamic>(() => typeof<dynamic>());
-      }
-      catch (e) {
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a ambiguous object (dynamic) When registering it using the declarative method Then it must throws ArgumentError', () {
+    test(
+        'Given a ambiguous object (dynamic) When registering it using the declarative method Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
         container.registerSimple<dynamic>(() => typeof<dynamic>());
-      }
-      catch (e) {
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a ambiguous object (bool) When registering it as "Type" using the declarative method Then it must throws ArgumentError', () {
+    test(
+        'Given a ambiguous object (bool) When registering it as "Type" using the declarative method Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
         container.register<Type, Type>(() => typeof<bool>());
-      }
-      catch (e) {
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a ambiguous object (int) When registering it as "Type" using the declarative method Then it must throws ArgumentError', () {
+    test(
+        'Given a ambiguous object (int) When registering it as "Type" using the declarative method Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
         container.register<Type, Type>(() => typeof<int>());
-      }
-      catch (e) {
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a ambiguous object (double) When registering it as "Type" using the declarative method Then it must throws ArgumentError', () {
+    test(
+        'Given a ambiguous object (double) When registering it as "Type" using the declarative method Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
         container.register<Type, Type>(() => typeof<double>());
-      }
-      catch (e) {
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a ambiguous object (num) When registering it as "Type" using the declarative method Then it must throws ArgumentError', () {
+    test(
+        'Given a ambiguous object (num) When registering it as "Type" using the declarative method Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
         container.register<Type, Type>(() => typeof<num>());
-      }
-      catch (e) {
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a string object When registering it as singleton using the declarative method Then it must throws ArgumentError', () {
+    test(
+        'Given a string object When registering it as singleton using the declarative method Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
-        container.register<String, String>(() => 'some value', Lifestyle.singleton);
-      }
-      catch (e) {
+        container.register<String, String>(
+            () => 'some value', Lifestyle.singleton);
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a string object When registering it using the declarative method Then it must throws ArgumentError', () {
+    test(
+        'Given a string object When registering it using the declarative method Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
         container.register<String, String>(() => 'some value');
-      }
-      catch (e) {
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a string object When registering it as singleton Then it must throws ArgumentError', () {
+    test(
+        'Given a string object When registering it as singleton Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
-        container.registerSimple<String>( () => 'some value', Lifestyle.singleton);
-      }
-      catch (e) {
+        container.registerSimple<String>(
+            () => 'some value', Lifestyle.singleton);
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a string object When registering it Then it must throws ArgumentError', () {
+    test(
+        'Given a string object When registering it Then it must throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
         container.registerSimple<String>(() => 'some value');
-      }
-      catch (e) {
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
 
-    test('Given a "Container" object When registering it Then throws ArgumentError', () {
+    test(
+        'Given a "Container" object When registering it Then throws ArgumentError',
+        () {
       final container = SimplyInjector.Container();
       try {
-        container.register<Container, Container>(() => SimplyInjector.Container());
-      }
-      catch (e) {
+        container
+            .register<Container, Container>(() => SimplyInjector.Container());
+      } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
     });
-
   });
 }

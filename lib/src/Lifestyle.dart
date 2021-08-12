@@ -7,8 +7,7 @@ part 'SingletonLifestyle.dart';
 part 'TransientLifestyle.dart';
 
 /// Instances returned from the container can be cached.
-abstract class Lifestyle
-{
+abstract class Lifestyle {
   static const Lifestyle transient = TransientLifestyle();
   static const Lifestyle singleton = SingletonLifestyle();
   //TODO static final Lifestyle scoped = new _ScopedLifestyle();
@@ -18,5 +17,6 @@ abstract class Lifestyle
   @protected
   const Lifestyle(this.name);
 
-  InstanceProducer createInstanceProducer<TService, TImplementation>( Constructor<TImplementation> constructor );
+  InstanceProducer createInstanceProducer<TService, TImplementation>(
+      Constructor<TImplementation> constructor);
 }

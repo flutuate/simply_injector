@@ -15,16 +15,20 @@ void main() {
   group('[Curiously Recurring Template Pattern Tests]', () {
     setUp(() {});
 
-    test('Given a open generic object When registering it using curiously recurring template pattern Then it must be succeeds', () {
+    test(
+        'Given a open generic object When registering it using curiously recurring template pattern Then it must be succeeds',
+        () {
       var container = Container();
       container.register<IRepo, RepoA>(() => RepoA<Entity>());
     });
 
-    test('Given a open generic object When registering it using curiously recurring template pattern When get instance Then it must be succeeds', () {
+    test(
+        'Given a open generic object When registering it using curiously recurring template pattern When get instance Then it must be succeeds',
+        () {
       var container = Container();
       container.register<IRepo, RepoA<Entity>>(() => RepoA<Entity>());
       var repo = container.get<IRepo>();
-      expect( repo, isA<RepoA<Entity>>() );
+      expect(repo, isA<RepoA<Entity>>());
     });
   });
 }
