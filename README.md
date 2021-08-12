@@ -41,7 +41,7 @@ var container = new Container();
 or using a library prefix to avoid conflict with Flutter's *Container' class:
 ```dart
 import 'package:simply_injector/simply_injector.dart' as si;
-...
+... 
 si.Container container = new si.Container();
 ```
 The first way it's so much elegantly ;)

@@ -1,14 +1,12 @@
 import 'package:meta/meta.dart';
-import 'package:simply_injector/simply_injector.dart';
-import 'package:simply_injector/src/ContainerOptions.dart';
-import 'package:simply_injector/src/InstanceProducer.dart';
-import 'package:simply_injector/src/Requires.dart';
 
+import 'ContainerOptions.dart';
+import 'InstanceProducer.dart';
 import 'Lifestyle.dart';
+import 'Requires.dart';
 import 'core.dart';
 import 'exceptions/ActivationException.dart';
-
-part 'Container.Common.dart';
+import 'exceptions/TypeAlreadyRegisteredException.dart';
 
 /// Convenient [Container] to keep compatibility with the original library.
 @sealed
@@ -22,7 +20,7 @@ class SimplyInjector extends Container
 
 /// Container is used to register mappings between each abstraction (service)
 /// and its corresponding implementation (component).
-class Container with Container_Common
+class Container
 {
   final Map<Type, InstanceProducer> _producers = {};
 
@@ -30,13 +28,18 @@ class Container with Container_Common
 
   /// Registers a constructor for type [TService]. This constructor must be
   /// specified in [constructor] and must generate an instance of [TService].
-  void registerSimple<TService>(Constructor<TService> constructor, [Lifestyle lifestyle = Lifestyle.transient])
+  /// Default value of [lifestyle] is [Lifestyle.transient].
+  void registerSimple<TService>(Constructor<TService> constructor,
+      [Lifestyle lifestyle = Lifestyle.transient])
     => register<TService, TService>(constructor, lifestyle);
 
   /// Registers a constructor for type [TService]. This constructor must be
   /// specified in [constructor] and must generate an instance
   /// of [TImplementation] which, in turn, must inherit from [TService].
-  void register<TService, TImplementation extends TService>(Constructor<TImplementation> constructor, [Lifestyle lifestyle = Lifestyle.transient])
+  /// Default value of [lifestyle] is [Lifestyle.transient].
+  void register<TService, TImplementation extends TService>(
+      Constructor<TImplementation> constructor,
+      [Lifestyle lifestyle = Lifestyle.transient])
   {
     Requires.isNotAnAmbiguousType(TService, 'TService');
 
@@ -57,7 +60,8 @@ class Container with Container_Common
   }
 
   /// Gets an instance of the given [TService].
-  /// Throws [ActivationException] when there are errors resolving the service instance.
+  /// Throws [ActivationException] when there are errors resolving the service
+  /// instance.
   TService get<TService>() {
     var type = typeof<TService>();
     final producer = _producers[type];
@@ -69,4 +73,8 @@ class Container with Container_Common
 
   /// Unregisters the producer to [TService], if it already registered.
   void unregister<TService>() => _producers.remove(typeof<TService>());
+
+  void dispose() {
+    _producers.clear();
+  }
 }

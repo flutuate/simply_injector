@@ -5,7 +5,8 @@ import 'package:simply_injector/src/Types.dart';
 class Requires {
   static void isNotAnAmbiguousType(Type type, String paramName) {
     if (Types.isAmbiguousType(type)) {
-      final message = '${StringResources.typeIsAmbiguous(type)}\nParameter name: $paramName';
+      final message = '${StringResources.typeIsAmbiguous(type)}\n'
+          'Parameter name: $paramName';
       throw ArgumentError(message);
     }
   }

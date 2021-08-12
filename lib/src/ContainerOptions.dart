@@ -13,6 +13,6 @@
 /// ```
 class ContainerOptions {
   /// A value indicating whether the container allows overriding registrations.
-  /// Default=false.
+  /// Default `false`.
   bool allowOverridingRegistrations = false;
 }

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+* Clean code 
+* Null safety
+
 ## 1.0.0-nullsafety.4
 * Changes to conform with static analysis
 

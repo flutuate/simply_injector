@@ -1,4 +1,5 @@
-/// The standard exception thrown when a container has an error in resolving an object.
+/// The standard exception thrown when a container has an error in resolving
+/// an object.
 class ActivationException implements Exception {
   final String _message;
 
