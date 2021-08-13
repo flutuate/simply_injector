@@ -4,7 +4,6 @@ import 'common_classes.dart';
 
 void main() {
   group('[Register by generic argument]', () {
-
     test('Given a generic argument When registering it Then it must be succeed',
         () {
       final container = SimplyInjector.Container();

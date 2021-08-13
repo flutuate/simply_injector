@@ -40,7 +40,8 @@ class Container {
       [Lifestyle lifestyle = Lifestyle.transient]) {
     Requires.isNotAnAmbiguousType(TService, 'TService');
 
-    if (!options.allowOverridingRegistrations && _producers.containsKey(TService)) {
+    if (!options.allowOverridingRegistrations &&
+        _producers.containsKey(TService)) {
       throw TypeAlreadyRegisteredException(TService);
     }
 
