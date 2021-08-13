@@ -8,7 +8,7 @@ class SingletonLifestyle extends Lifestyle {
   InstanceProducer createInstanceProducer<TService, TImplementation>(
           Constructor<TImplementation> constructor) =>
       _SingletonInstanceProducer<TService, TImplementation>(
-          typeof<TService>(), typeof<TImplementation>(), constructor());
+          TService, TImplementation, constructor());
 }
 
 class _SingletonInstanceProducer<TService, TImplementation>

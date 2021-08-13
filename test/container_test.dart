@@ -29,7 +29,7 @@ void main() {
 
       var type = container.runtimeType;
 
-      expect(type == typeof<SimplyInjector>(), isTrue);
+      expect(type == SimplyInjector, isTrue);
     });
   });
 }

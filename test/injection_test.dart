@@ -1,5 +1,5 @@
 import 'package:simply_injector/simply_injector.dart';
-import 'TestClasses.dart';
+import 'common_classes.dart';
 import 'package:test/test.dart';
 
 void main() {

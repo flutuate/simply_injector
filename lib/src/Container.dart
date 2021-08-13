@@ -40,15 +40,14 @@ class Container {
       [Lifestyle lifestyle = Lifestyle.transient]) {
     Requires.isNotAnAmbiguousType(TService, 'TService');
 
-    final type = typeof<TService>();
-    if (!options.allowOverridingRegistrations && _producers.containsKey(type)) {
-      throw TypeAlreadyRegisteredException(type);
+    if (!options.allowOverridingRegistrations && _producers.containsKey(TService)) {
+      throw TypeAlreadyRegisteredException(TService);
     }
 
     var instanceProducer = lifestyle
         .createInstanceProducer<TService, TImplementation>(constructor);
 
-    addInstanceProducer(typeof<TService>(), instanceProducer);
+    addInstanceProducer(TService, instanceProducer);
   }
 
   @protected
@@ -61,16 +60,15 @@ class Container {
   /// Throws [ActivationException] when there are errors resolving the service
   /// instance.
   TService get<TService>() {
-    var type = typeof<TService>();
-    final producer = _producers[type];
+    final producer = _producers[TService];
     if (producer == null) {
-      throw ActivationException(type);
+      throw ActivationException(TService);
     }
     return producer.create();
   }
 
   /// Unregisters the producer to [TService], if it already registered.
-  void unregister<TService>() => _producers.remove(typeof<TService>());
+  void unregister<TService>() => _producers.remove(TService);
 
   void dispose() {
     _producers.clear();

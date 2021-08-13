@@ -32,7 +32,7 @@ void main() {
         () {
       final container = SimplyInjector.Container();
       try {
-        container.register<dynamic, dynamic>(() => typeof<dynamic>());
+        container.register<dynamic, dynamic>(() => dynamic);
       } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
@@ -43,7 +43,7 @@ void main() {
         () {
       final container = SimplyInjector.Container();
       try {
-        container.registerSimple<dynamic>(() => typeof<dynamic>());
+        container.registerSimple<dynamic>(() => dynamic);
       } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
@@ -54,7 +54,7 @@ void main() {
         () {
       final container = SimplyInjector.Container();
       try {
-        container.register<Type, Type>(() => typeof<bool>());
+        container.register<Type, Type>(() => bool);
       } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
@@ -65,7 +65,7 @@ void main() {
         () {
       final container = SimplyInjector.Container();
       try {
-        container.register<Type, Type>(() => typeof<int>());
+        container.register<Type, Type>(() => int);
       } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
@@ -76,7 +76,7 @@ void main() {
         () {
       final container = SimplyInjector.Container();
       try {
-        container.register<Type, Type>(() => typeof<double>());
+        container.register<Type, Type>(() => double);
       } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }
@@ -87,7 +87,7 @@ void main() {
         () {
       final container = SimplyInjector.Container();
       try {
-        container.register<Type, Type>(() => typeof<num>());
+        container.register<Type, Type>(() => num);
       } catch (e) {
         expect(e, TypeMatcher<ArgumentError>());
       }

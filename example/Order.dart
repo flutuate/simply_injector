@@ -1,9 +1,14 @@
 import 'OrderStatus.dart';
 
 class Order {
-  final String Id;
+  static const empty = _EmptyOrder();
 
-  OrderStatus Status;
+  final String id;
+  final OrderStatus status;
 
-  Order(this.Id, {this.Status = OrderStatus.Cancelled});
+  const Order(this.id, this.status);
+}
+
+class _EmptyOrder extends Order {
+  const _EmptyOrder() : super('', OrderStatus.cancelled);
 }

@@ -1,1 +1,1 @@
-enum OrderStatus { Cancelled }
+enum OrderStatus { active, cancelled }

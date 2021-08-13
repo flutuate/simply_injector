@@ -60,7 +60,7 @@ import 'Guid.dart';
 import 'IEventPublisher.dart';
 import 'ILogger.dart';
 import 'IOrderRepository.dart';
-import 'SqlOrderRepository.dart';
+import 'OrderRepositoryInMemory.dart';
 
 main()
 {

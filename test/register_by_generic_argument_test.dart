@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
 import 'package:simply_injector/simply_injector.dart';
-import 'TestClasses.dart';
+import 'common_classes.dart';
 
 void main() {
   group('[Register by generic argument]', () {
-    setUp(() {});
 
     test('Given a generic argument When registering it Then it must be succeed',
         () {

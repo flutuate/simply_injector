@@ -8,7 +8,7 @@ class TransientLifestyle extends Lifestyle {
   InstanceProducer createInstanceProducer<TService, TImplementation>(
           Constructor<TImplementation> constructor) =>
       _TransientInstanceProducer<TService, TImplementation>(
-          typeof<TService>(), typeof<TImplementation>(), constructor);
+          TService, TImplementation, constructor);
 }
 
 class _TransientInstanceProducer<TService, TImplementation>

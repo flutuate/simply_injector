@@ -1,9 +1,9 @@
 class Guid {
-  String value;
+  final String value;
 
   Guid(this.value);
 
-  static Guid Parse(String value) => Guid(value);
+  static Guid parse(String value) => Guid(value);
 
   @override
   String toString() {

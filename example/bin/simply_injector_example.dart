@@ -1,24 +1,26 @@
 import 'package:simply_injector/simply_injector.dart';
 
-import 'CancelOrder.dart';
-import 'CancelOrderHandler.dart';
-import 'EventPublisher.dart';
-import 'FileLogger.dart';
-import 'Guid.dart';
-import 'IEventPublisher.dart';
-import 'ILogger.dart';
-import 'IOrderRepository.dart';
-import 'SqlOrderRepository.dart';
+import '../CancelOrder.dart';
+import '../CancelOrderHandler.dart';
+import '../EventPublisher.dart';
+import '../FileLogger.dart';
+import '../Guid.dart';
+import '../IEventPublisher.dart';
+import '../ILogger.dart';
+import '../IOrderRepository.dart';
+import '../OrderRepositoryInMemory.dart';
 
 void main() {
   // 1. Create a new Simple Injector container
   var container = SimplyInjector.Container();
 
   // 2. Configure the container (register)
-  container.register<IOrderRepository, SqlOrderRepository>(
-      () => SqlOrderRepository(container.get<ILogger>()));
+  container.register<IOrderRepository, OrderRepositoryInMemory>(
+      () => OrderRepositoryInMemory(container.get<ILogger>()));
+
   container.register<ILogger, FileLogger>(
       () => FileLogger(), Lifestyle.singleton);
+
   container.register<IEventPublisher, EventPublisher>(
       () => EventPublisher(), Lifestyle.singleton);
 
@@ -33,7 +35,7 @@ void main() {
   var handler = container.get<CancelOrderHandler>();
 
   var args = ['0123456789'];
-  var orderId = Guid.Parse(args[0]);
+  var orderId = Guid.parse(args[0]);
   var command = CancelOrder(orderId);
 
   handler.Handle(command);
