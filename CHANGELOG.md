@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1
+* Removed unnecessary typeof
+* Adjusted example program
+* Clean code and dartfmt
+
 ## 1.1.0
 * Clean code 
 * Null safety
