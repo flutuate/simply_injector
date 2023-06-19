@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0
+* Migrated to Dart 3+.
+* Cleaned code. 
+* Changed LICENSE.
+
 ## 1.1.1
 * Removed unnecessary typeof
 * Adjusted example program

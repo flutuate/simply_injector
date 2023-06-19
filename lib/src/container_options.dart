@@ -1,7 +1,7 @@
 /// Configuration options for the [Container].
 /// The following example shows the typical usage of the [ContainerOptions] class.
 /// ```
-/// var container = SimplyInjector.Container();
+/// var container = Container();
 ///
 /// container.registerSimple<ITimeProvider>(() => DefaultTimeProvider() );
 ///
@@ -14,5 +14,9 @@
 class ContainerOptions {
   /// A value indicating whether the container allows overriding registrations.
   /// Default `false`.
-  bool allowOverridingRegistrations = false;
+  final bool allowOverridingRegistrations;
+
+  bool get notAllowOverridingRegistrations => !allowOverridingRegistrations;
+
+  const ContainerOptions({this.allowOverridingRegistrations = false});
 }
