@@ -1,4 +1,4 @@
-import 'Instance.dart';
+import 'instance.dart';
 import 'core.dart';
 
 /// Represents a transient instance of [C].

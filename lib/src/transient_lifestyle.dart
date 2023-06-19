@@ -1,4 +1,4 @@
-part of 'Lifestyle.dart';
+part of 'lifestyle.dart';
 
 @protected
 class TransientLifestyle extends Lifestyle {

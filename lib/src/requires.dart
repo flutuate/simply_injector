@@ -1,8 +1,8 @@
-import 'package:simply_injector/src/StringResources.dart';
-import 'package:simply_injector/src/Types.dart';
+import 'package:simply_injector/src/string_resources.dart';
+import 'package:simply_injector/src/types.dart';
 
 /// Convenience class with common methods.
-class Requires {
+sealed class Requires {
   static void isNotAnAmbiguousType(Type type, String paramName) {
     if (Types.isAmbiguousType(type)) {
       final message = '${StringResources.typeIsAmbiguous(type)}\n'

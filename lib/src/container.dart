@@ -1,16 +1,10 @@
 import 'package:meta/meta.dart';
+import 'package:simply_injector/simply_injector.dart';
 
-import 'ContainerOptions.dart';
-import 'InstanceProducer.dart';
-import 'Lifestyle.dart';
-import 'Requires.dart';
-import 'core.dart';
-import 'exceptions/ActivationException.dart';
-import 'exceptions/TypeAlreadyRegisteredException.dart';
+@Deprecated('This class will be removed at next version, use [Container]')
 
 /// Convenient [Container] to keep compatibility with the original library.
-@sealed
-class SimplyInjector extends Container {
+sealed class SimplyInjector extends Container {
   /// Convenient [Container] constructor to keep compatibility with the original library.
   SimplyInjector.Container() {
     Container();
@@ -22,7 +16,9 @@ class SimplyInjector extends Container {
 class Container {
   final Map<Type, InstanceProducer> _producers = {};
 
-  final ContainerOptions options = ContainerOptions();
+  final ContainerOptions options;
+
+  Container([this.options = const ContainerOptions()]);
 
   /// Registers a constructor for type [TService]. This constructor must be
   /// specified in [constructor] and must generate an instance of [TService].
@@ -40,7 +36,7 @@ class Container {
       [Lifestyle lifestyle = Lifestyle.transient]) {
     Requires.isNotAnAmbiguousType(TService, 'TService');
 
-    if (!options.allowOverridingRegistrations &&
+    if (options.notAllowOverridingRegistrations &&
         _producers.containsKey(TService)) {
       throw TypeAlreadyRegisteredException(TService);
     }

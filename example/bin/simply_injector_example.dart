@@ -12,7 +12,7 @@ import '../OrderRepositoryInMemory.dart';
 
 void main() {
   // 1. Create a new Simple Injector container
-  var container = SimplyInjector.Container();
+  var container = Container();
 
   // 2. Configure the container (register)
   container.register<IOrderRepository, OrderRepositoryInMemory>(
