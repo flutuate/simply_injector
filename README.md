@@ -34,11 +34,7 @@ It's possible create an instance of *Container* by some ways:
 ```dart
 var container = new SimplyInjector.Container();
 ```
-or
-```dart
-var container = new Container();
-```
-or using a library prefix to avoid conflict with Flutter's *Container' class:
+or using a library prefix to avoid conflict with Flutter's `Container` class:
 ```dart
 import 'package:simply_injector/simply_injector.dart' as si;
 ... 
