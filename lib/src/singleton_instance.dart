@@ -1,4 +1,4 @@
-import 'Instance.dart';
+import 'instance.dart';
 
 /// Represents a singleton instance of [C].
 class SingletonInstance<C> implements Instance<C> {

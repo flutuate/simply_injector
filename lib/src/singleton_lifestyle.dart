@@ -1,7 +1,7 @@
-part of 'Lifestyle.dart';
+part of 'lifestyle.dart';
 
 @protected
-class SingletonLifestyle extends Lifestyle {
+final class SingletonLifestyle extends Lifestyle {
   const SingletonLifestyle() : super('Singleton');
 
   @override
@@ -11,7 +11,7 @@ class SingletonLifestyle extends Lifestyle {
           TService, TImplementation, constructor());
 }
 
-class _SingletonInstanceProducer<TService, TImplementation>
+final class _SingletonInstanceProducer<TService, TImplementation>
     implements InstanceProducer<TService> {
   final TImplementation _singletonInstance;
 

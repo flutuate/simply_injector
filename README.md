@@ -12,7 +12,7 @@ Add `simply_injector` to `pubspec.yaml` under the `dependencies` field.
 
 ```yaml
 dependencies:
-  simply_injector: ^latest_version
+  simply_injector: ^2.0.0
 ```
 
 
@@ -32,7 +32,7 @@ register mappings between each abstraction (service) and its corresponding imple
 
 It's possible create an instance of *Container* by some ways:
 ```dart
-var container = new SimplyInjector.Container();
+var container = new Container();
 ```
 or using a library prefix to avoid conflict with Flutter's `Container` class:
 ```dart
@@ -61,15 +61,15 @@ import 'OrderRepositoryInMemory.dart';
 main()
 {
   // 1. Create a new Simple Injector container
-  var container = new SimplyInjector.Container();
+  var container = Container();
 
   // 2. Configure the container (register)
-  container.register<IOrderRepository, SqlOrderRepository>( () => new SqlOrderRepository(container.get<ILogger>()));
-  container.register<ILogger, FileLogger>( () => new FileLogger(), Lifestyle.Singleton );
-  container.register<IEventPublisher, EventPublisher>( () => new EventPublisher(), Lifestyle.Singleton );
+  container.register<IOrderRepository, SqlOrderRepository>( () => SqlOrderRepository(container.get<ILogger>()));
+  container.register<ILogger, FileLogger>( () => FileLogger(), Lifestyle.Singleton );
+  container.register<IEventPublisher, EventPublisher>( () => EventPublisher(), Lifestyle.Singleton );
 
   container.register<CancelOrderHandler, CancelOrderHandler>(()
-    => new CancelOrderHandler(
+    => CancelOrderHandler(
       container.get<IOrderRepository>(),
       container.get<ILogger>(),
       container.get<IEventPublisher>() 
@@ -84,7 +84,7 @@ main()
 
   var args = ['0123456789'];
   var orderId = Guid.Parse(args[0]);
-  var command = new CancelOrder(orderId);
+  var command = CancelOrder(orderId);
 
   handler.Handle(command);
 }
