@@ -1,6 +1,6 @@
 name: simply_injector
 description: An easy-to-use Dependency Injection (DI) library for Dart, inspired and based on Simple Injector library. It is easily integrated with Flutter.
-version: 2.0.0
+version: 2.1.0
 homepage: https://github.com/flutuate/simply_injector
 
 environment:

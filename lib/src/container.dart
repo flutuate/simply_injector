@@ -67,6 +67,8 @@ class Container {
   /// Unregisters the producer to [TService], if it already registered.
   void unregister<TService>() => _producers.remove(TService);
 
+  bool contains<TService>() => _producers.containsKey(TService);
+
   void dispose() {
     _producers.clear();
   }

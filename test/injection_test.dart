@@ -175,5 +175,65 @@ void main() {
 
       expect(instance3, isA<InMemoryUserRepository>());
     });
+
+    test('''
+    Given a registered singleton producer 
+    When check if the type was registered 
+    Then it must be true
+    ''', () {
+      final container = Container();
+
+      container.registerSimple<IRepository>(
+          () => InMemoryUserRepository(), Lifestyle.singleton);
+
+      container.register<IElement, ElementOne>(
+          () => ElementOne(), Lifestyle.singleton);
+
+      var containsType = container.contains<IRepository>();
+      expect(containsType, isTrue);
+
+      containsType = container.contains<IElement>();
+      expect(containsType, isTrue);
+    });
+
+    test('''
+    Given a registered transient producer 
+    When check if the type was registered 
+    Then it must be true
+    ''', () {
+      final container = Container();
+
+      container.registerSimple<IRepository>(
+          () => InMemoryUserRepository(), Lifestyle.transient);
+
+      container.register<IElement, ElementOne>(
+          () => ElementOne(), Lifestyle.transient);
+
+      var containsType = container.contains<IRepository>();
+      expect(containsType, isTrue);
+
+      containsType = container.contains<IElement>();
+      expect(containsType, isTrue);
+    });
+
+    test('''
+    Given a unregistered producer 
+    When check if a type was registered 
+    Then it must be false
+    ''', () {
+      final container = Container();
+
+      var containsType = container.contains<IElement>();
+      expect(containsType, isFalse);
+    });
   });
+}
+
+abstract interface class IElement {
+  String get name;
+}
+
+class ElementOne implements IElement {
+  @override
+  String get name => 'One';
 }
